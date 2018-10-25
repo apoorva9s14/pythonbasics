@@ -24,6 +24,8 @@ class Price(object):
         self.values = WeakKeyDictionary() #explanation below
 
     def __get__(self, instance, owner):
+        #instance is the instance of Boook Class
+        #owner is the Book Class
         #return self.values.get(instance, self.default) #This is needed to just print the default value, if the key is not found
         return self.values.get(instance)
 
