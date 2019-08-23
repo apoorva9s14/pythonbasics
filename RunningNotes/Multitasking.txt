@@ -1,16 +1,30 @@
 Modes of execution:
 
-1. Synchronous:
-         One by one execution, one after the other
-2. Multi threading
-        Thread - when I/O bound tasks are present,
+1.  Synchronous:
+        One by one execution, one after the other
+2.  Multi threading
+		Thread - when I/O bound tasks are present,
 		instead of spawning new process(as spawning process is costly),
 		in the same process multiple threads are spawned and each thread
 		executes independent of one another(Similar to TDMA)
 		Concurrency
-3. Multi processing
-        Parallelism
+3.  Multi processing
+        Parallelism - for CPU bound tasks
+		New process is spawned 
+4.  Asyncio
+        symphony between an Event loop, Tasks and Coroutines.
+		Event loop - Orchestrator
+			It runs tasks one after the other. 
+			At any given time, only one of the tasks is running.
+			Event loop is the measure of progress. Not making progress - step off the loop.
 		
 		
 		
+CPU Bound => Multi Processing
+I/O Bound, Fast I/O, Limited Number of Connections => Multi Threading
+I/O Bound, Slow I/O, Many connections => Asyncio
+
+http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/		
 https://medium.com/contentsquare-engineering-blog/multithreading-vs-multiprocessing-in-python-ece023ad55a
+https://hackernoon.com/a-simple-introduction-to-pythons-asyncio-595d9c9ecf8c
+https://realpython.com/async-io-python/
