@@ -1,0 +1,16 @@
+Modes of execution:
+
+1. Synchronous:
+         One by one execution, one after the other
+2. Multi threading
+        Thread - when I/O bound tasks are present,
+		instead of spawning new process(as spawning process is costly),
+		in the same process multiple threads are spawned and each thread
+		executes independent of one another(Similar to TDMA)
+		Concurrency
+3. Multi processing
+        Parallelism
+		
+		
+		
+https://medium.com/contentsquare-engineering-blog/multithreading-vs-multiprocessing-in-python-ece023ad55a
