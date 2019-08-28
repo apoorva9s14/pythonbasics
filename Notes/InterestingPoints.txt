@@ -1,0 +1,3 @@
+1. Once the class is deleted,the instances of the class are not getting deleted.
+   Same holds true for function objects.
+2. 
