@@ -1,4 +1,5 @@
-
+#decorator is a function that takes another function and extends the behavior of the latter function 
+#without explicitly modifying it.
 #Writing decorator_fn-smart_divide
 #Pass the fn_tobe_decorated(any variable func) to the decorator function(smart_divide).
 def smart_divide(func):#Only the function which has to be decorated is passed here.
