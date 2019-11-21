@@ -1,0 +1,45 @@
+5 levels, debug,inof,warning,error,critical
+Info - gives the information of the step by step execution
+warning - says that something is wrong and can lead to error in the nearby future
+
+logging.basicConfig()
+parameters:
+level
+	- debug,info etc
+filename
+filemode
+	- append, write
+format
+	- log message format
+
+Ex:
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+format='%(process)d-%(levelname)s-%(message)s'
+possible options for format:
+https://docs.python.org/3/library/logging.html#logrecord-attributes
+format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S'
+logging.error("Exception occurred", exc_info=True)
+
+Logger class - instantiated using logging.getLogger(name). 
+Multiple calls to getLogger() with the same name will return a reference to the same Logger object.
+
+# Create a custom logger
+logger = logging.getLogger(__name__)
+
+# Create handlers
+c_handler = logging.StreamHandler()
+f_handler = logging.FileHandler('file.log')
+
+#Setlevel
+c_handler.setLevel(logging.WARNING)
+f_handler.setLevel(logging.ERROR)
+
+# Create formatters and add it to handlers
+c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+c_handler.setFormatter(c_format)
+f_handler.setFormatter(f_format)
+
+# Add handlers to the logger
+logger.addHandler(c_handler)
+logger.addHandler(f_handler)
