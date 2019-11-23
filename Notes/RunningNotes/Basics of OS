@@ -1,0 +1,10 @@
+An Operating System is a collection of software that manages computer hardware.
+It hides hardware complexity, manages computational resources, and provides isolation and protection. 
+it directly has privilege access to the underlying hardware. 
+
+
+Elements of an OS:
+
+(1) Abstractions (process, thread, file, socket, memory), 
+(2) Mechanisms (create, schedule, open, write, allocate), and 
+(3) Policies (LRU, EDF)
