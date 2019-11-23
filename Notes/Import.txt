@@ -1,0 +1,10 @@
+Two types of imports:
+1. Absolute
+   Uses full path starting from root folder to the desired module
+2. Relative
+   Again two types
+   
+   a. Implicit relative imports are supported only in python 2.
+
+   b. Explicit relative imports format:
+      From . Import *

@@ -1,0 +1,6 @@
+1. Tutorials to follow:
+https://dbader.org/blog/python-decorators
+pythoncourse eu
+
+At the end:
+python official tutorial

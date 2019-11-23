@@ -19,6 +19,10 @@ print(divide(2,0))
 #@smart_divide is same as writing divide = smart_divide(divide)
 
 #Decorator is a higher order function
+#A function which takes another function as input is a higher order function
+#Closure, decorator etc
+
+#Decorator should modify the behaviour of the decorated function
 #Inner function returns the function call of the function which is passed, again an example of closure.
 
 #Classes as decorators

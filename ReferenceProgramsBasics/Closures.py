@@ -12,6 +12,14 @@ g = startAt(100)
 
 print(f(1), g(2))  #Call this function object again to get the desired value)
 #11 102
+
+'''
+Closures are useful because they let you associate some data (the lexical environment) with a function that operates on that data. 
+This is similar to OOP, where objects have some data (the object's properties) with one or more methods.
+
+We can use a closure anywhere that you might normally use an object with only a single method.
+Closures are factories for functions
+'''
 '''Closures in python are created by function calls. 
 In the code above, the call to startAt() creates a binding for start that is referenced inside the function incrementBy(). 
 Each call to startAt() creates a new instance of this function, but each instance has a link to a different binding of start. 

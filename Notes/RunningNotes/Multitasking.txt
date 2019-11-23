@@ -28,6 +28,10 @@ I/O Bound, Slow I/O, Many connections => Asyncio
 Difference between threading and asyncio is that threading uses multi threads to achieve concurrency whereas
 asyncio achieves concurrency in a single thread.
 
+To find the number of CPUs:
+import multiprocessing
+multiprocessing.cpu_count()
+
 http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/		
 https://medium.com/contentsquare-engineering-blog/multithreading-vs-multiprocessing-in-python-ece023ad55a
 https://hackernoon.com/a-simple-introduction-to-pythons-asyncio-595d9c9ecf8c
