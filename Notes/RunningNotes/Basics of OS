@@ -1,0 +1,25 @@
+An Operating System is a collection of software that manages computer hardware.
+It hides hardware complexity, manages computational resources, and provides isolation and protection. 
+it directly has privilege access to the underlying hardware. 
+
+
+Elements of an OS:
+
+(1) Abstractions (process, thread, file, socket, memory), 
+(2) Mechanisms (create, schedule, open, write, allocate), and 
+(3) Policies (LRU, EDF)
+
+
+operating system design principles:
+(1) Separation of mechanism and policy by implementing flexible mechanisms to support policies, and 
+(2) Optimize for common case: 
+    Where will the OS be used? What will the user want to execute on that machine? What are the workload requirements?
+
+Process Management:
+What is a process:
+A program in execution. When a program is loaded into the memory and it becomes a process.
+It can be divided into four sections:
+Stack: The process Stack contains the temporary data such as method/function parameters, return address and local variables.
+Heap: This is dynamically allocated memory to a process during its run time.
+Text: This includes the current activity represented by the value of Program Counter and the contents of the processor’s registers.
+Data: This section contains the global and static variables.
