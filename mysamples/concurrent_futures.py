@@ -19,12 +19,12 @@ def mysamplejob(i):
 
 def threadfn():
     """sample fn to spawn threads"""
-    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=8000)
+    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=50)
     #TODO - what is the upper limit of max_workers
     futures = []
     results = []
 
-    for i in range(0, 8000):
+    for i in range(0, 500):
         futures.append(tpool.submit(mysamplejob, i))
 
     for task in concurrent.futures.as_completed(futures):
@@ -33,11 +33,11 @@ def threadfn():
 
 
 def processjob():
-    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=2000)
+    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=50)
     futures = []
     results = []
 
-    for i in range(0, 2000):
+    for i in range(0, 125):
         futures.append(tpool.submit(mysamplejob, i))
     for task in concurrent.futures.as_completed(futures):
         results.append(task.result())
