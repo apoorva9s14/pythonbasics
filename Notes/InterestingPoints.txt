@@ -1,3 +1,5 @@
 1. Once the class is deleted,the instances of the class are not getting deleted.
    Same holds true for function objects.
-2. 
+2. There is more than one way to complete the code
+   If you are stuck using some method, always explore the other possible way to do it.
+   Whenever you are stuck, use dir(module) to explore all the possible options.
