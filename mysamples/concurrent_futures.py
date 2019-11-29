@@ -1,30 +1,49 @@
 """
-Simple ThreadPoolExecutor example
+ThreadPoolExecutor vs ProcessPoolExecutor example
+Given a sample_input_range of items
+What is the performance of ThreadPoolExecutor vs ProcessPoolExecutor
+
+Input: sample_input_range = list of input items
+ThreadPool max_workers :tmax_workers = 50
+ProcessPool max_workers :pmax_workers = os.cpu_count() - 1  i.e, no.of cores - 1
+
+Load Distribution:
+ThreadPool : sample_input_range -> tmax_workers
+ProcessPool :
+sample_input_range =
+floor(sample_input_range/pmax_workers) + remainder -> pmax_workers -> tmax_workers
+(Just to Ensure even distribution of load to all the processes)
+
 """
 
 import concurrent.futures
 import time
 import cProfile
 import pstats
+import os
+import math
 from profiling import decorator_profile
 
+sample_input_range = 500
+tmax_workers = 50
+pmax_workers = os.cpu_count() - 1
 
 def mysamplejob(i):
-    '''I/O intense tasks'''
-    time.sleep(10)
-    x = 1
-    time.sleep(30)
+    """I/O intense tasks"""
+    time.sleep(2)
+    i = i+1     #Some random compute
+    time.sleep(5)
     return i
 
 
 def threadfn():
     """sample fn to spawn threads"""
-    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=8000)
-    #TODO - what is the upper limit of max_workers
+    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=tmax_workers)
+    #TODO - what is the upper limit of max_workers for a given set of data
     futures = []
     results = []
 
-    for i in range(0, 8000):
+    for i in range(0, sample_input_range):
         futures.append(tpool.submit(mysamplejob, i))
 
     for task in concurrent.futures.as_completed(futures):
@@ -32,12 +51,13 @@ def threadfn():
     # print("Results", results)
 
 
-def processjob():
-    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=2000)
+def processjob(process_input_range):
+    """Sample fn to spawn threads inside a single process"""
+    tpool = concurrent.futures.ThreadPoolExecutor(max_workers=tmax_workers)
     futures = []
     results = []
 
-    for i in range(0, 2000):
+    for i in range(0, process_input_range):
         futures.append(tpool.submit(mysamplejob, i))
     for task in concurrent.futures.as_completed(futures):
         results.append(task.result())
@@ -45,11 +65,15 @@ def processjob():
 
 def processfn():
     """sample fn to spawn processes"""
-    tpool = concurrent.futures.ProcessPoolExecutor(max_workers=4)
+    tpool = concurrent.futures.ProcessPoolExecutor(max_workers=pmax_workers)
     futures = []
+    floor_range = math.floor(sample_input_range / pmax_workers)
+    remainder_range = sample_input_range % pmax_workers
 
-    for i in range(0, 4):
-            futures.append(tpool.submit(processjob))
+    for i in range(0, pmax_workers):
+        futures.append(tpool.submit(processjob, floor_range))
+    for i in range(0,remainder_range):
+        futures.append(tpool.submit(processjob, remainder_range))
 
     for task in concurrent.futures.as_completed(futures):
         # print(task.result())
