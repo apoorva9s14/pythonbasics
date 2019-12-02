@@ -30,7 +30,7 @@ pmax_workers = os.cpu_count() - 1
 
 def mysamplejob(i):
     """I/O intense tasks"""
-    time.sleep(2)
+    time.sleep(7)
     i = i+1     #Some random compute
     time.sleep(5)
     return i
