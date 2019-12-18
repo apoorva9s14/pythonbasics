@@ -24,22 +24,26 @@ import os
 import math
 from profiling import decorator_profile
 
+# TODO use decorator_profile in the logic
+# TODO MANDATORY getting pid and threadid
+
 sample_input_range = 500
 tmax_workers = 50
 pmax_workers = os.cpu_count() - 1
 
-def mysamplejob(i):
+
+def mysamplejob (i):
     """I/O intense tasks"""
     time.sleep(7)
-    i = i+1     #Some random compute
+    i = i + 1  # Some random compute
     time.sleep(5)
     return i
 
 
-def threadfn():
+def threadfn ():
     """sample fn to spawn threads"""
     tpool = concurrent.futures.ThreadPoolExecutor(max_workers=tmax_workers)
-    #TODO - what is the upper limit of max_workers for a given set of data
+    # TODO - what is the upper limit of max_workers for a given set of data
     futures = []
     results = []
 
@@ -51,7 +55,7 @@ def threadfn():
     # print("Results", results)
 
 
-def processjob(process_input_range):
+def processjob (process_input_range):
     """Sample fn to spawn threads inside a single process"""
     tpool = concurrent.futures.ThreadPoolExecutor(max_workers=tmax_workers)
     futures = []
@@ -63,7 +67,8 @@ def processjob(process_input_range):
         results.append(task.result())
     # print("Results",results)
 
-def processfn():
+
+def processfn ():
     """sample fn to spawn processes"""
     tpool = concurrent.futures.ProcessPoolExecutor(max_workers=pmax_workers)
     futures = []
@@ -72,8 +77,26 @@ def processfn():
 
     for i in range(0, pmax_workers):
         futures.append(tpool.submit(processjob, floor_range))
-    for i in range(0,remainder_range):
+    for i in range(0, remainder_range):
         futures.append(tpool.submit(processjob, remainder_range))
+
+    for task in concurrent.futures.as_completed(futures):
+        # print(task.result())
+        pass
+
+def process_new_fn ():
+    """sample fn to spawn processes"""
+    tpool = concurrent.futures.ProcessPoolExecutor(max_workers=pmax_workers)
+    futures = []
+    floor_range = math.floor(sample_input_range / pmax_workers)
+    remainder_range = sample_input_range % pmax_workers
+    for i in range(0, sample_input_range):
+        futures.append(tpool.submit(mysamplejob, i))
+
+    # for i in range(0, pmax_workers):
+    #     futures.append(tpool.submit(processjob, floor_range))
+    # for i in range(0, remainder_range):
+    #     futures.append(tpool.submit(processjob, remainder_range))
 
     for task in concurrent.futures.as_completed(futures):
         # print(task.result())
@@ -83,8 +106,11 @@ def processfn():
 if __name__ == "__main__":
     # decorator_profile(threadfn)()
     cProfile.run('processfn()', 'proessStats')
+    cProfile.run('process_new_fn()', 'proessnewStats')
     cProfile.run('threadfn()', 'threadStats')
     p = pstats.Stats('proessStats')
+    print(p.sort_stats('time').print_stats(10))
+    p = pstats.Stats('proessnewStats')
     print(p.sort_stats('time').print_stats(10))
     p = pstats.Stats('threadStats')
     print(p.sort_stats('time').print_stats(10))

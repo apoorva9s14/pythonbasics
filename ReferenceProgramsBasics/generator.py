@@ -1,4 +1,4 @@
-#Difference between fucntions and generator
+#Difference between functions and generator
 
 def g():
     print('inside generator')
@@ -16,3 +16,23 @@ f()
 #Function call prints 'inside function' and 1
 #as the code in the function body gets executed with the function call
 
+"""yield comma separated items"""
+
+def firstgen():
+    for i in range(0,10):
+        yield i, i+100
+
+firstgen_data = firstgen()
+def secondgen():
+    for item in firstgen_data:
+        upd_item = item[0] + 1000
+        print(upd_item)
+        yield upd_item
+
+sg_obj = secondgen()
+
+try:
+    while True:
+        next(sg_obj)
+except StopIteration:
+    print("DONE")
