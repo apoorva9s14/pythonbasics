@@ -1,0 +1,3 @@
+Apache - web server software, a software which runs on a physical machine,
+which helps in serving web pages
+

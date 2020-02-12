@@ -27,9 +27,9 @@ from profiling import decorator_profile
 # TODO use decorator_profile in the logic
 # TODO MANDATORY getting pid and threadid
 
-sample_input_range = 500
+sample_input_range = 50
 tmax_workers = 50
-pmax_workers = os.cpu_count() - 1
+pmax_workers = 3
 
 
 def mysamplejob (i):
@@ -65,13 +65,13 @@ def processjob (process_input_range):
         futures.append(tpool.submit(mysamplejob, i))
     for task in concurrent.futures.as_completed(futures):
         results.append(task.result())
-    # print("Results",results)
-
+    return results
 
 def processfn ():
     """sample fn to spawn processes"""
     tpool = concurrent.futures.ProcessPoolExecutor(max_workers=pmax_workers)
     futures = []
+    results = []
     floor_range = math.floor(sample_input_range / pmax_workers)
     remainder_range = sample_input_range % pmax_workers
 
@@ -81,9 +81,8 @@ def processfn ():
         futures.append(tpool.submit(processjob, remainder_range))
 
     for task in concurrent.futures.as_completed(futures):
-        # print(task.result())
-        pass
-
+        results.append(task.result())
+    return results
 def process_new_fn ():
     """sample fn to spawn processes"""
     tpool = concurrent.futures.ProcessPoolExecutor(max_workers=pmax_workers)
@@ -104,13 +103,11 @@ def process_new_fn ():
 
 
 if __name__ == "__main__":
-    # decorator_profile(threadfn)()
-    cProfile.run('processfn()', 'proessStats')
-    cProfile.run('process_new_fn()', 'proessnewStats')
-    cProfile.run('threadfn()', 'threadStats')
-    p = pstats.Stats('proessStats')
-    print(p.sort_stats('time').print_stats(10))
-    p = pstats.Stats('proessnewStats')
-    print(p.sort_stats('time').print_stats(10))
-    p = pstats.Stats('threadStats')
-    print(p.sort_stats('time').print_stats(10))
+    print(processfn())
+    # # decorator_profile(threadfn)()
+    # cProfile.run('processfn()', 'proessStats')
+    # cProfile.run('threadfn()', 'threadStats')
+    # p = pstats.Stats('proessStats')
+    # print(p.sort_stats('time').print_stats(10))
+    # p = pstats.Stats('threadStats')
+    # print(p.sort_stats('time').print_stats(10))

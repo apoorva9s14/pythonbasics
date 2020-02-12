@@ -11,6 +11,7 @@ Example 2:
 Input: ["H","a","n","n","a","h"]
 Output: ["h","a","n","n","a","H"]
 """
+import re
 
 
 class Solution(object):
@@ -19,8 +20,13 @@ class Solution(object):
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.
         """
+        ref_len = len(s)
         for i in range(0, len(s)):
+            regex = re.compile("[@_!#$%^&*()<>?/\|}{~:]")
             pop_element = s.pop()
+            if regex.search(pop_element) == "$":
+                s.insert(ref_len - len(s), pop_element)
+                continue
             # print("pop elem, ", pop_element, i)
             s.insert(i, pop_element)
             # print(s)
@@ -28,5 +34,5 @@ class Solution(object):
 
 
 mysol = Solution()
-print(mysol.reverse_string(["h", "E", "l", "L", "o"]))
+print(mysol.reverse_string(["h", "$", "E", "l", "L", "o"]))
 print(mysol.reverse_string(["h", "E"]))

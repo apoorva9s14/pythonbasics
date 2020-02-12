@@ -1,0 +1,5 @@
+1. The tail recursive functions are better than non tail recursive functions
+   as tail-recursion can be optimized by compiler because:,
+   since the recursive call is the last statement, there is nothing left to do in the current function,
+   so there is no need to save the current function’s stack frame.
+   GiveAway - Convert non tail functions to tail recursive functions for further optimisation

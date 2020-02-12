@@ -1,0 +1,2 @@
+> from sys import getsizeof --> gives the memory taken by an object
+>

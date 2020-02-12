@@ -1,2 +1,42 @@
-memoized_fibonacci.__closure__[0].cell_contents
+1. memoized_fibonacci.__closure__[0].cell_contents
+
+2. Lambdas : Single Expression Functions
+        No Statements, just one single expression
+
+3. Catching all exceptions in a single exception is an anti-pattern
+
+4. Diff b/w shallow copy and deep copy:
+        A shallow copy means constructing a new collection object and then
+    populating it with references to the child objects found in the original.
+    Shallow copy ==> one level deep copy.
+    Deep copy ==> Recursive deep
+        A deep copy makes the copying process recursive. It means first constructing
+    a new collection object and then recursively populating it
+    with copies of the child objects found in the original.
+
+5. Example of recursion -
+    String - each char of string is in turn a string
+    Deep Copy
+
+
+6. Static methods are a way to namespace your methods
+   Class methods can be used as factory methods to create your own custom
+   class objects. You can use the cls variable to create new objects
+
+7. Real world analogies of each data structure
+    List    -  Parking lot
+    Dict    -  Phonebook
+
+8. Dictionaries
+    O(1) operations
+    Class attributes are stored in dictionary
+    To preserve key order - OrderedDict
+    TO give default values for missing keys - Default dict
+    To group multiple dicts to single object - ChainMap
+    Read only dict - types.MappingProxyType
+    To access key as dict.key instead of dict[key] - types.SimpleNamespace
+
+9. Lists
+    array.array - list of the same data type
+
 
