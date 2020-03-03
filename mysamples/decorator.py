@@ -1,4 +1,4 @@
-#Difference between fucntions and generator
+#Difference between functions and generator
 
 def g():
     print('inside generator')

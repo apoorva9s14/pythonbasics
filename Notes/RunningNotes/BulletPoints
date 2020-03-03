@@ -1,2 +1,13 @@
-> from sys import getsizeof --> gives the memory taken by an object
->
+1. from sys import getsizeof --> gives the memory taken by an object
+
+2. __getattribute__  --> called by default
+   __getattr__       --> called if attr not found by __getattribute__
+
+3. operators.itemgetter
+   itemgetter(y)(x)  --> x[y]
+
+4. if condition -
+    only if the first condition is True, the second condition would be checked
+    otherwise the second condition is not even executed
+
+5.

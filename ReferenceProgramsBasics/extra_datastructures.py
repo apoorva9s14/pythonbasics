@@ -24,3 +24,9 @@ data = MyStruct.pack(23, False, 42.0)
 print(data)
 # will print blob of data
 MyStruct.unpack(data)
+
+
+################################################
+# Multisets
+################################################
+from collections import Counter

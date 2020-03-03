@@ -1,4 +1,4 @@
-1. memoized_fibonacci.__closure__[0].cell_contents
+1. Everything in Python is an object.
 
 2. Lambdas : Single Expression Functions
         No Statements, just one single expression
@@ -26,6 +26,7 @@
 7. Real world analogies of each data structure
     List    -  Parking lot
     Dict    -  Phonebook
+    Stack   -  Stack of plates
 
 8. Dictionaries
     O(1) operations
@@ -38,5 +39,62 @@
 
 9. Lists
     array.array - list of the same data type
+
+10. Set
+    Union Intersection Difference Subset
+    frozen set - immutable set
+
+11. List vs Stack vs Queue
+    Stack - LIFO
+    Queue - FIFO
+    Stack - Depth First Search
+    Queue - Breadth First Search
+    Similarities
+        Stack - insert and delete, List - push and pop
+        Both happen in O(1)
+        Every push pop in list doesnt need resizing
+    Stacks and Queues don't allow for random access to objects
+    collections.deque   -  insert and remove on both the sides
+                        -  doubly linked list
+    Priority Queue  -  Instead of retrieving the next element by insertion
+                       time, a priority queue retrieves the
+                       highest-priority element.
+    List cannot be used as Queue as, adding/removing elements to the beginning
+    needs list resizing
+
+12. Difference between sort and sorted
+    sort works only on lists
+    sorted works on any sequence type
+    Return value:
+    sort --> None,  sorted --> list
+    Functioning:
+    sort --> In place sort, modifies the list
+    sorted --> Does not modify the original list
+    Sorting in python uses timSort
+
+13. functools - higher order functions
+
+14. Interesting dictionary expression:
+    {True: 'yes', 1: 'no', 1.0: 'maybe'}
+    {True: 'maybe'}
+    a. True, 1, 1.0 all are equal
+    b. When we add a new key value pair to the dictionary,
+       python compares the new key with the existing key,
+       if it is same, it doesnt replace the original
+       dictionary. Instead it reassigns the new value
+    c. Dictionaries are looked up from hash table
+        each key gets a hash value assigned to it, so that
+        the lookups are faster
+    d. If two different keys have same hash value - hash collision
+    e. Keys get overwritten on two conditions:
+        If they are equal (__eq__ gives True)
+        If they have same hash value (__hash__)
+
+15. virtual env:
+    isolated Python environment
+    can separate Python dependencies by project and
+    can select between different versions of the Python interpreter
+
+
 
 
