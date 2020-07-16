@@ -1,0 +1,17 @@
+DataStructures --> Structures to store data
+Linear DataStructures Non-linear DataStructures
+
+########### Linear DataStructures #############
+
+Arrays:
+    Contiguous memory
+    Random Access
+    Tightly packed,hence performance optimised
+
+Difference between linkedlists and arrays:
+    Linked lists - sequential access
+    Arrays - Random access
+
+    Storage of elements of:
+    array - continuous
+    linked list - dispersed

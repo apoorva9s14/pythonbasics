@@ -15,6 +15,7 @@
     with copies of the child objects found in the original.
 
 5. Example of recursion -
+    Condition to stop Recursion
     String - each char of string is in turn a string
     Deep Copy
 
@@ -39,6 +40,11 @@
 
 9. Lists
     array.array - list of the same data type
+    difference between array and Python list:
+    list can store elements of diff data types
+    hence it is loosely packed. array is tightly packed
+    Arrays are space efficient
+
 
 10. Set
     Union Intersection Difference Subset
@@ -64,7 +70,7 @@
 
 12. Difference between sort and sorted
     sort works only on lists
-    sorted works on any sequence type
+    sorted works on any iterable
     Return value:
     sort --> None,  sorted --> list
     Functioning:

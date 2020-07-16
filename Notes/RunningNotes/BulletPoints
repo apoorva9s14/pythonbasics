@@ -10,4 +10,5 @@
     only if the first condition is True, the second condition would be checked
     otherwise the second condition is not even executed
 
-5.
+5. psutil.cpu_percent()
+   gives the cpu utilisation percentage

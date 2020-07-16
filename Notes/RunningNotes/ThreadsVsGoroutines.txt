@@ -1,8 +1,27 @@
-thread	goroutine
-OS threads are managed by kernal and has hardware dependencies.	goroutines are managed by go runtime and has no hardware dependencies.
-OS threads generally have fixed stack size of 1-2MB	goroutines typically have 8KB (2KB since Go 1.4) of stack size in newer versions of go
-Stack size is determined during compile time and can not grow	Stack size of go is managed in run-time and can grow up to 1GB which is possible by allocating and freeing heap storage
-There is no easy communication medium between threads. There is huge latency between inter-thread communication.	goroutine use channels to communicate with other goroutines with low latency (read more).
-Threads have identity. There is TID which identifies each thread in a process.	goroutine do not have any identity. go implemented this because go does not have TLS(Thread Local Storage).
-Threads have significant setup and teardown cost as a thread has to request lots of resources from OS and return once it's done.	goroutines are created and destoryed by the go's runtime. These operations are very cheap compared to threads as go runtime already maintain pool of threads for goroutines. In this case OS is not aware of goroutines.
-Threads are preemptively scheduled (read here). Switching cost between threads is high as scheduler needs to save/restore more than 50 registers and states. This can be quite significant when there is rapid switching between threads.	goroutines are coopertively scheduled (read more). When a goroutine switch occurs, only 3 registers need to be saved or restored.
+Thread  vs  goroutine
+OS threads are managed by kernal and has hardware dependencies.
+goroutines are managed by go runtime and has no hardware dependencies.
+
+OS threads generally have fixed stack size of 1-2MB
+goroutines typically have 8KB (2KB since Go 1.4) of stack size in newer versions of go
+
+Stack size is determined during compile time and can not grow
+Stack size of go is managed in run-time and can grow up to 1GB which is possible by allocating and freeing heap storage
+
+There is no easy communication medium between threads.
+There is huge latency between inter-thread communication.
+goroutine use channels to communicate with other goroutines with low latency (read more).
+
+Threads have identity. There is TID which identifies each thread in a process.
+goroutine do not have any identity. go implemented this because go does not have TLS(Thread Local Storage).
+
+Threads have significant setup and teardown cost as a thread has to request lots of resources from OS and return once it's done.
+goroutines are created and destroyed by the go's runtime.
+    These operations are very cheap compared to threads as go runtime already maintain pool of threads
+    for goroutines. In this case OS is not aware of goroutines.
+
+Threads are preemptively scheduled. Switching cost between threads is high as scheduler needs to
+    save/restore more than 50 registers and states. This can be quite significant when there is rapid
+    switching between threads.
+goroutines are coopertively scheduled (read more). When a goroutine switch occurs, only 3 registers
+    need to be saved or restored.
