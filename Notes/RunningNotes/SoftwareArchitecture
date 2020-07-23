@@ -1,39 +1,28 @@
-1. BigO Notation
-    tells the number of Operations (hence big O)
-    tells how fast the algorithm grows --> Rate of Growth
-    Eg - Binary Search needs logn operations to search n items
-       - running time --> Ologn
-    tells worst case run time
-    Eg - Binary search can never be slower than Ologn
-    Five major run times:
-    O(logn), O(n), O(n*logn), O(n*2), O(n!)
-    in the order of run times
-    O(n) time means you touch every element in a list once.
-
-2. Binary Search - only works for sorted items
-    Number of steps needed for binary search of n items:
-    2^x = n. "x" steps
-    log2 n steps
-    With each step the number of items to be searched for
-    gets reduced by half
-
-3. Python list is a dynamic array
-
-##########Sorting algorithms##############
-Sorting is important as a lot of algorithms work on sorted data
-##########################################
-4. Selection sort
-    Selection sort is an algorithm that selects the smallest element
-    from an unsorted list in each iteration and places that element
-    at the beginning of the unsorted list.
-    Sort by selection
-
-5. Divide and Conquer
-    Base case
-    with each recursion - you reduce the sample size
-
-6. Brute force vs Sliding window
-    Bruteforce Uses two for loops, sliding window slides across the input
-    O(n*2) vs O(n)
+Key principles of Design
+1. Availability
+2. Performance
+3. Reliability
+4. Scalability
+5. Manageability
+6. Cost
 
 
+Redundancy:
+If one fails - get back to other. Nothing is shared.
+Each node is independent of other.
+#TODO Failover to happen automatically.
+
+
+
+
+
+
+
+
+
+
+Miscellaneous:
+Typical Bottlenecks:
+
+Database reads are faster than writes
+Webservers have an upper limit on number of simultaneous connections

@@ -24,50 +24,6 @@
    Class methods can be used as factory methods to create your own custom
    class objects. You can use the cls variable to create new objects
 
-7. Real world analogies of each data structure
-    List    -  Parking lot
-    Dict    -  Phonebook
-    Stack   -  Stack of plates
-
-8. Dictionaries
-    O(1) operations
-    Class attributes are stored in dictionary
-    To preserve key order - OrderedDict
-    TO give default values for missing keys - Default dict
-    To group multiple dicts to single object - ChainMap
-    Read only dict - types.MappingProxyType
-    To access key as dict.key instead of dict[key] - types.SimpleNamespace
-
-9. Lists
-    array.array - list of the same data type
-    difference between array and Python list:
-    list can store elements of diff data types
-    hence it is loosely packed. array is tightly packed
-    Arrays are space efficient
-
-
-10. Set
-    Union Intersection Difference Subset
-    frozen set - immutable set
-
-11. List vs Stack vs Queue
-    Stack - LIFO
-    Queue - FIFO
-    Stack - Depth First Search
-    Queue - Breadth First Search
-    Similarities
-        Stack - insert and delete, List - push and pop
-        Both happen in O(1)
-        Every push pop in list doesnt need resizing
-    Stacks and Queues don't allow for random access to objects
-    collections.deque   -  insert and remove on both the sides
-                        -  doubly linked list
-    Priority Queue  -  Instead of retrieving the next element by insertion
-                       time, a priority queue retrieves the
-                       highest-priority element.
-    List cannot be used as Queue as, adding/removing elements to the beginning
-    needs list resizing
-
 12. Difference between sort and sorted
     sort works only on lists
     sorted works on any iterable

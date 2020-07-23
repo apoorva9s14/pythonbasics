@@ -1,6 +1,29 @@
-your local repository consists of three "trees" maintained by git. 
+four fundamental elements in the Git Workflow.
+1. Working Directory
+2. Staging Area (INDEX)
+3. Local Repository (HEAD)
+4. Remote Repository.
+The first three are trees in your local machine.
+
+Commands:
+git add --> add a file that is in the working directory to the staging area.
+git commit --> add all files that are staged to the local repository.
+git push --> add all committed files in the local repository to the remote repository. So in the remote repository, all files and changes will be visible to anyone with access to the remote repository.
+git fetch --> get files from the remote repository to the local repository
+              but not into the working directory.
+git merge --> get the files from the local repository into the working directory.
+git pull --> get files from the remote repository directly into the working directory.
+             git pull = git fetch + git merge
+git stash --> tracked files of working directory and staged changes(i.e.,git add files)
+              will be moved to stash of unfinished changes
+git stash apply --> brings back the stashed changes to working directory
+git status --> difference between the working directory and the index
+git diff --> difference between current state and the staged state
+
+your local repository consists of three "trees" maintained by git.
 the first one is your Working Directory which holds the actual files. 
 the second one is the Index which acts as a staging area and 
 finally the HEAD which points to the last commit you've made. 
 
 https://rogerdudler.github.io/git-guide/
+https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/

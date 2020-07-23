@@ -2,6 +2,7 @@ DataStructures --> Structures to store data
 Linear DataStructures Non-linear DataStructures
 
 ########### Linear DataStructures #############
+Have a logical start and logical end
 
 Arrays:
     Contiguous memory
@@ -15,3 +16,95 @@ Difference between linkedlists and arrays:
     Storage of elements of:
     array - continuous
     linked list - dispersed
+
+Real world analogies of each data structure
+    List    -  Parking lot
+    Dict    -  Phonebook
+    Stack   -  Stack of plates
+
+Dictionaries
+    O(1) operations
+    Class attributes are stored in dictionary
+    To preserve key order - OrderedDict
+    TO give default values for missing keys - Default dict
+    To group multiple dicts to single object - ChainMap
+    Read only dict - types.MappingProxyType
+    To access key as dict.key instead of dict[key] - types.SimpleNamespace
+
+Python Lists
+    array.array - list of the same data type
+    difference between array and Python list:
+    list can store elements of diff data types
+    hence it is loosely packed. array is tightly packed
+    Arrays are space efficient
+
+Set
+    Union Intersection Difference Subset
+    frozen set - immutable set
+
+List vs Stack vs Queue
+    Stack - LIFO
+    Queue - FIFO
+    Stack - Depth First Search
+    Queue - Breadth First Search
+    Similarities
+        Stack - insert and delete, List - push and pop
+        Both happen in O(1)
+        Every push pop in list doesnt need resizing
+    Stacks and Queues don't allow for random access to objects
+    collections.deque   -  insert and remove on both the sides
+                        -  doubly linked list
+    Priority Queue  -  Instead of retrieving the next element by insertion
+                       time, a priority queue retrieves the
+                       highest-priority element.
+    List cannot be used as Queue as, adding/removing elements to the beginning
+    needs list resizing
+
+Hashing
+    Hashing helps in fast lookup as the data is stored as key value pair
+    Diff b/w hashing, encryption, encoding
+    Encryption --> data is jumbled so that only someone with the key
+    needed to decrypt the data will have access to it.
+    We also want to decrypt the data at some point. In encryption we want to recover the original data.
+
+    Hashing, takes data and produces an output for the purpose of confirming the integrity of data.
+    In hashing we have no intention of recovering the original data.
+
+    Encoding merely converts the data into a format that another system can use.
+    The goal of encoding is not to obscure data for any security purpose
+
+########### Non-Linear DataStructures #############
+Organises the data hierarchically
+
+Tree
+    A tree is a collection of nodes.
+    Nodes are connected by edges.
+    Each node contains a value or data.
+    Root - branches - leaves
+    Height of the Tree --> length of the longest path to a leaf
+    Depth of the node --> length of the path to its root
+
+Binary Tree
+    Each node has at the most two children.
+    Each node has three attributes: value, left_child, and right_child.
+
+Insertion in Tree:
+    If the left child node exists, replace that node with the new node
+    Add the existing left child node as the new node's left child node
+
+Traversal in Tree:
+    Depth first Search, Breadth first Search
+    Depth first - First search path: Go to the end of the leaf(i.e.,depth) and then backtrack and search
+    Breadth first - First search path: Check the neighbours(i.e.,breadth) and then search the depth
+
+    Pre-order   = Node, left child, right child
+    In-order    = left child, Node, right child
+    Post-order  = left child, right child, Node
+
+
+
+
+Useful URLS:
+https://www.freecodecamp.org/news/the-codeless-guide-to-hash/
+https://www.freecodecamp.org/news/all-you-need-to-know-about-tree-data-structures-bceacb85490c/
+https://www.bigocheatsheet.com/

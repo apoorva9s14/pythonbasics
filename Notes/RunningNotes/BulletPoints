@@ -12,3 +12,10 @@
 
 5. psutil.cpu_percent()
    gives the cpu utilisation percentage
+
+6. def is similar to assignment. it assigns a function name at runtime
+   The code inside def is not executed until the function is called
+
+7. 'for else' is useful if a 'break' is present in the for loop
+   If the for loop does not break and the loop completes,
+   then else is executed
