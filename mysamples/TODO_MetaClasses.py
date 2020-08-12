@@ -3,6 +3,8 @@ MetaClass defines the behaviour of class  just like
 Class defines the behaviour of instance
 
 If you define __call__ in Class, it makes the instance Callable
+MetaClass usecases - In Django,#TODODjango
+#TODO - https://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/
 """
 
 
@@ -34,11 +36,11 @@ class MetaClass(type):
             print("CALL *kwargs", k, v)
 
 
-    @classmethod
+    # @classmethod
     def __prepare__(mcs, *args, **kwargs):
         print("In MC Prepare")
         print("Prepare mcs", mcs)
-        print("PREPARE *args", *args)
+        print("PREPARE *args", *args, "**kwargs", **kwargs)
         for k, v in kwargs.items():
             print("NEW **kwargs", k, v)
         return {}
@@ -63,12 +65,12 @@ class ExampleClass(metaclass=MetaClass):
         print("NEW *args", *args)
         for k, v in kwargs.items():
             print("NEW **kwargs", k, v)
-        return object.__new__(cls, *args, **kwargs)
+        return type.__new__(cls, *args, **kwargs)
 
     def __call__(self, *args, **kwargs):
         """This call makes the instance callable
         Args are the args of instance"""
-        print("CALL Cls", self)
+        print("72 CALL Cls", self)
         print("CALL *args", *args)
         for k, v in kwargs.items():
             print("CALL *kwargs", k, v)
@@ -76,7 +78,7 @@ class ExampleClass(metaclass=MetaClass):
     @classmethod
     def __prepare__(mcs, *args, **kwargs):
         print("In CLASS Prepare")
-        print("Prepate mcs", mcs)
+        print("Prepare mcs", mcs)
         print("PREPARE *args", *args)
         for k, v in kwargs.items():
             print("NEW **kwargs", k, v)
@@ -84,3 +86,7 @@ class ExampleClass(metaclass=MetaClass):
 
 mymet_instance = ExampleClass(1,2)
 mymet_instance()
+
+
+# Useful URLS:
+# https://yasoob.me/2013/09/20/all-about-the-metaclasses-in-python/

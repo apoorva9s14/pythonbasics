@@ -10,14 +10,21 @@
     in the order of run times
     O(n) time means you touch every element in a list once.
 
+    Examples:
+    O(logn)  --> Binary Search
+    O(n)     --> For loop
+    O(n*logn)-->
+    O(n*2)   --> Nested for loops
+    o(n!)    -->
+
 2. Binary Search - only works for sorted items
     Number of steps needed for binary search of n items:
-    2^x = n. "x" steps
-    log2 n steps
+    2^x = n --> "x" steps i.e., log2 n steps
     With each step the number of items to be searched for
     gets reduced by half
 
 3. Python list is a dynamic array
+    An array which is resizable.
 
 ##########Sorting algorithms##############
 Sorting is important as a lot of algorithms work on sorted data
@@ -36,4 +43,4 @@ Sorting is important as a lot of algorithms work on sorted data
     Bruteforce Uses two for loops, sliding window slides across the input
     O(n*2) vs O(n)
 
-
+7. 

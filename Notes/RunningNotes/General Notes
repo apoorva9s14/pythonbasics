@@ -57,6 +57,31 @@
     can separate Python dependencies by project and
     can select between different versions of the Python interpreter
 
+16. Delegating work is an important advantage in OOPs
+    It can be done in two ways:
+    Inheritance vs Composition
+    Inheritance - Class B inherits from class A
+                - Class B "is a" class A
+                - Liskov substitution principle
+    Composition - Combines Classes of two types
+                - Class B "has a" class A
+    Ex - Horse is an Animal - Inheritance
+       - Horse has a Tail - Composition
+       - Here Tail is a Class too
 
+17. Class is a template to produce objects
+    Class is an object. As it is an object, it can be created from Metaclass
+    All Classes in python are created from Metaclass type
+    class C:pass <==> type("C", (), {})
+    class FooChild(Foo):pass <==> type('FooChild', (Foo,), {})
+    class C:x=1 <==> type("C", (), {"x":1})
+    type(class_name,(class_parents),{class_attributes})
 
+    type --> metaclass --> class factory
+
+18. Abstract Base Class -
+    A base class which is the template to ensure classes are created with
+    the needed methods
+    Mixins -
+    Multiple inheritance which allows to mix-in diff properties
 

@@ -19,3 +19,8 @@
 7. 'for else' is useful if a 'break' is present in the for loop
    If the for loop does not break and the loop completes,
    then else is executed
+
+8. To know the difference in properties between two data types.
+    use set difference
+
+memo

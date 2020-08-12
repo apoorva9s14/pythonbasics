@@ -1,0 +1,29 @@
+Software Development Principles - SOLID
+While using OOP paradigm
+
+S - Single Responsibility
+Every module or class should be responsible for singe functionality
+One Class One Purpose
+
+O - Open closed Principle
+Open for extension Closed for modification.
+Behaviour should be extendable without modifying the source code.
+
+Example --> Can be implemented with Abstract Base class.
+Base class is closed for Modification
+Child class is open for extension
+
+L - Liskov Substitution Principle
+Behavioral sub-typing is the principle that subclasses should satisfy the expectations
+of clients accessing subclass objects through references of superclass type,
+not just as regards syntactic safety (absence of method-not-found errors and such)
+but also as regards behavioral correctness.
+
+if S is a subtype of T, then objects of type T may be replaced by objects of type S
+without breaking the program.
+
+I - Interface Segregation Principle
+    A client should not be forced to implement an interface that it does not use
+    Using Abstract base classes and inheritance we can achieve this
+    Right abstractions are to be implemented.
+    Abstractions are incorrect when a client depends on methods it doesn't use.

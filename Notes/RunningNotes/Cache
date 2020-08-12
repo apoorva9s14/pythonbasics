@@ -1,0 +1,27 @@
+Cache:
+    Temporary storage area that stores the used items for easy access.
+    Speed factor
+    Why are caches faster:
+        Small memory size -- reduces the number of scans to retrieve data
+        Location  -- Caches are located closer to the consumer (CPU) hence the less latency.
+Cache invalidation:
+No longer serve the data from cache, instead get a fresh copy
+
+Cache eviction policies:
+The item which is returned by this policy is evicted first
+1. LRU
+    Least Recently Used
+2. MRU
+    Most Recently Used
+3. FIFO
+    First in First Out
+
+
+Python lru cache implementation
+In python lru_cache is a decorator in-built in functools
+
+@lru_cache is to to be applied on every function definition
+for which lru_cache is needed
+
+
+https://bhavaniravi.com/blog/caching-in-python
