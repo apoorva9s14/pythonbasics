@@ -1,0 +1,21 @@
+Real memory exists on RAM chips inside the computer.
+Virtual memory is an optimization technique, implemented by the OS.
+
+Virtual memory apparently is greater than physical memory.
+Say an OS needs 120 MB of memory, but there’s only 50 MB of available physical
+    memory. The OS will create 120 MB of virtual memory, and will use
+    virtual memory manager (VMM) to manage that 120 MB.
+    The VMM will create 70 MB (120 – 50) swap file/paging file on the hard disk.
+    This process is called Swapping.
+    Excessive disk swapping, called thrashing, slows down system’s performance
+
+Difference between stack and heap:
+They are both stored in the computer’s RAM.
+Each thread will have its own stack.
+All the threads will share the same heap, so there needs to be coordination between the threads
+On a function call, stack is allocated. Once the call completes, stack will be deleted.
+Data on the heap will remain there until it’s manually deleted by the programmer.
+
+Useful URLs:
+http://www.programmerinterview.com/operating-systems/how-virtual-memory-works/
+

@@ -23,4 +23,9 @@
 8. To know the difference in properties between two data types.
     use set difference
 
-memo
+9. The reason behind giving a range of values for N, in competitive programming is:
+    if you use two for loops and the max value of N is 10*3, no.of operations needed would be-
+    N*2 --> 10^6. Usual sites allow for 10^8 operations/second.
+    If max value is 10^5 , then we might get time limit exceeded error.
+    So we have to chose the solution wisely, considering the time complexity.
+    https://www.geeksforgeeks.org/knowing-the-complexity-in-competitive-programming/?ref=rp

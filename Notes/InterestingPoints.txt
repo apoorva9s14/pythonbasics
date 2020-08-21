@@ -4,4 +4,11 @@
    If you are stuck using some method, always explore the other possible way to do it.
    Whenever you are stuck, use dir(module) to explore all the possible options.
 3. String is a recursive data type, each character in itself is a string.
-4. Lookups are costly, so as far as possible, use functions within the scope
+4. Lookups are costly, so as far as possible, use functions within the scope.
+    If the global function has to be used multiple time, copy that to the local scope.
+5. There are various time complexities ranging from O(1) to O(N!).
+    Depending on the problem the combined time complexity of the solution varies.
+    In some cases, O(N) approach could be better that O(logN).
+    https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt
+
+

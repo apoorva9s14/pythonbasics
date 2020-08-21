@@ -59,12 +59,17 @@
 
 16. Delegating work is an important advantage in OOPs
     It can be done in two ways:
-    Inheritance vs Composition
+    Inheritance and Association
     Inheritance - Class B inherits from class A
                 - Class B "is a" class A
                 - Liskov substitution principle
+    Association - Composition, Aggregation
     Composition - Combines Classes of two types
                 - Class B "has a" class A
+                - Class B has an object of class A
+                - The object of class A is created under __init__
+    Aggregation - Same as composition
+                - The object of class A is passed as an input to methods of class B
     Ex - Horse is an Animal - Inheritance
        - Horse has a Tail - Composition
        - Here Tail is a Class too
@@ -82,6 +87,28 @@
 18. Abstract Base Class -
     A base class which is the template to ensure classes are created with
     the needed methods
-    Mixins -
+    Mixins
     Multiple inheritance which allows to mix-in diff properties
+
+19. Context management
+    Helps to allocate and release resources precisely when you want to.
+    Context managers should be used along with "with"
+    Instead of using try-except-finally
+    Two ways of implementing:
+    1. Class based - __enter__, __exit__
+    __enter__ and __exit__ would be called
+    2. Function based
+    contextlib.contextmanager can be used as a decorator
+    The function should have a single yield
+    the statements before yield are __enter__
+    the statements after yield are __exit__
+
+20. Polymorphism
+    We can differentiate between different items with the same name.
+    Two types - Overloading, Overriding
+    Method overloading
+    Methods having the same name with different arguments
+
+21. Interfaces
+    Interface is a set of publicly accessible methods on an object
 

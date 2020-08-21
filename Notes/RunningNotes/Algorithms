@@ -1,7 +1,7 @@
 1. BigO Notation
     tells the number of Operations (hence big O)
     tells how fast the algorithm grows --> Rate of Growth
-    Eg - Binary Search needs logn operations to search n items
+    Eg - Binary Search needs logn operations to search n items, 2^x=n, x= logn to the base2
        - running time --> Ologn
     tells worst case run time
     Eg - Binary search can never be slower than Ologn

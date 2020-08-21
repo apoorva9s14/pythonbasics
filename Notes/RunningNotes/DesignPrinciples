@@ -24,6 +24,21 @@ without breaking the program.
 
 I - Interface Segregation Principle
     A client should not be forced to implement an interface that it does not use
-    Using Abstract base classes and inheritance we can achieve this
+    Using Abstract base classes and inheritance we can achieve this.
     Right abstractions are to be implemented.
     Abstractions are incorrect when a client depends on methods it doesn't use.
+
+    While creating abstractions, if all the logics have something in common, abstract them
+    in the abstraction layer, and provide an interface to do the specific activity.
+    So you are breaking the functionality to bits and pieces.
+    If the bits and pieces are not helping, then there is no need for abstraction.
+
+D - Dependency Inversion Principle
+    High-level modules should not depend on low-level modules. Both should depend on abstractions.
+    Abstractions should not depend on details. Details should depend on abstractions.
+
+    The Abstract methods should be purely abstract.
+    They should not be created based on the details of the child.
+    They should be generic enough to be abstract
+
+#TODO - DRY, ACID

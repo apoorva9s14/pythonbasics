@@ -16,6 +16,7 @@ Difference between linkedlists and arrays:
     Storage of elements of:
     array - continuous
     linked list - dispersed
+    Memory efficiency is better in linked lists
 
 Real world analogies of each data structure
     List    -  Parking lot
@@ -37,7 +38,19 @@ Python Lists
     list can store elements of diff data types
     hence it is loosely packed. array is tightly packed
     Arrays are space efficient
+    Lists are also allocated contiguous chunks of memory
+    If the list grows in size,the append operation will need reallocation of memory
+    Because the memory is contiguous, fast access of random elements,slicing is also faster.
 
+Deque
+    collections.deque is similar to lists except that insert and remove is faster on both the ends.
+    Deque is based on linked list implementation.
+
+
+    ############Time Complexity##############
+    In lists, adding/removing new items need O(n) complexity
+    Setting values O(1) complexity.
+    Finding length of list is also O(1)
 Set
     Union Intersection Difference Subset
     frozen set - immutable set
@@ -60,6 +73,14 @@ List vs Stack vs Queue
     List cannot be used as Queue as, adding/removing elements to the beginning
     needs list resizing
 
+Stacks
+    All operations like push and pop are O(1)
+    Applications of Stack:
+    Undo Redo Changes
+    String reversal
+
+Queues
+    To maintain order
 Hashing
     Hashing helps in fast lookup as the data is stored as key value pair
     Diff b/w hashing, encryption, encoding
@@ -108,3 +129,4 @@ Useful URLS:
 https://www.freecodecamp.org/news/the-codeless-guide-to-hash/
 https://www.freecodecamp.org/news/all-you-need-to-know-about-tree-data-structures-bceacb85490c/
 https://www.bigocheatsheet.com/
+https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt
