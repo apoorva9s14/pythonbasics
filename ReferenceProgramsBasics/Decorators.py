@@ -26,7 +26,9 @@ print(divide(2,0))
 #Inner function returns the function call of the function which is passed, again an example of closure.
 
 #Classes as decorators
-
+#Classes should have init and call implemented
+#init initialises with the function, call makes the class instance callable
+#because the function is callable
 #1.Class-based decorators without arguments
 class CustomAttr:
     def __init__(self, obj):
@@ -35,8 +37,8 @@ class CustomAttr:
 
     def __call__(self):
         self.obj()
-	#Class is callable, but the object of the class is not callable, to make it callable use __call__method.
-	#Here func is a CustomAttr object
+#Class is callable, but the object of the class is not callable, to make it callable use __call__method.
+#Here func is a CustomAttr object
 @CustomAttr
 def func():
     pass

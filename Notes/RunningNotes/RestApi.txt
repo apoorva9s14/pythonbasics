@@ -1,0 +1,11 @@
+REST - Representational State Transfer
+
+Uniform interface
+Client–server
+Stateless
+Cacheable
+Layered system
+Code on demand (optional)
+
+
+https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm

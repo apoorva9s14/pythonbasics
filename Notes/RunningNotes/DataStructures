@@ -9,6 +9,8 @@ Arrays:
     Random Access
     Tightly packed,hence performance optimised
 
+Linked lists:
+    can be used to implement Stacks, Queues, Graphs
 Difference between linkedlists and arrays:
     Linked lists - sequential access
     Arrays - Random access
@@ -16,7 +18,9 @@ Difference between linkedlists and arrays:
     Storage of elements of:
     array - continuous
     linked list - dispersed
-    Memory efficiency is better in linked lists
+    Memory efficiency is better in linked lists, because we dont need to give
+    predefined memory, but more memory is needed for storage of linked list
+
 
 Real world analogies of each data structure
     List    -  Parking lot
@@ -44,7 +48,8 @@ Python Lists
 
 Deque
     collections.deque is similar to lists except that insert and remove is faster on both the ends.
-    Deque is based on linked list implementation.
+    Deque is based on doubly linked list implementation.
+    Random access is slow with deque as we need to track the nodes from beginning
 
 
     ############Time Complexity##############
@@ -81,12 +86,13 @@ Stacks
 
 Queues
     To maintain order
+
 Hashing
     Hashing helps in fast lookup as the data is stored as key value pair
     Diff b/w hashing, encryption, encoding
     Encryption --> data is jumbled so that only someone with the key
     needed to decrypt the data will have access to it.
-    We also want to decrypt the data at some point. In encryption we want to recover the original data.
+    We also want to decrypt the data at some point. In decryption we want to recover the original data.
 
     Hashing, takes data and produces an output for the purpose of confirming the integrity of data.
     In hashing we have no intention of recovering the original data.
@@ -102,8 +108,9 @@ Tree
     Nodes are connected by edges.
     Each node contains a value or data.
     Root - branches - leaves
-    Height of the Tree --> length of the longest path to a leaf
-    Depth of the node --> length of the path to its root
+    Height of the NODE --> length of the longest path from NODE to the deepest leaf
+    Depth of the NODE --> length of the path to its root
+    Height of the TREE --> height of the node, where node is root
 
 Binary Tree
     Each node has at the most two children.
@@ -122,7 +129,20 @@ Traversal in Tree:
     In-order    = left child, Node, right child
     Post-order  = left child, right child, Node
 
-
+When to use each data structure:
+You only have a few (2-3) fields:
+plain tuple
+Immutable fields:
+plain tuples, collections.namedtuple, typing.NamedTuple
+You need to lock down field names to avoid typos:
+collections.namedtuple and typing.NamedTuple
+You want to keep things simple: A plain dictionary object
+You need full control over your data structure:
+custom class with @property setters and getters.
+You need to add behavior (methods) to the object:
+custom class
+You need to pack data tightly to serialize it to disk or send it over:
+ the network: struct.Struct.
 
 
 Useful URLS:

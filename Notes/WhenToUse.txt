@@ -1,0 +1,22 @@
+"""A document which gives the reasoning for
+When to use each of the below topics"""
+
+Iterators --> For lazy evaluation
+          --> To not load everything into memory
+Generators--> Simplified way to create iterators
+          --> No need to define __iter__, __next__. Just use yield
+          --> Saves the state of the function
+
+Closures --> Function factories
+         --> Similar to class with single method
+         --> Retain state at the time of creation
+         --> They associate some data with the function(similar to class)
+
+Classmethods--> factory methods to create new objects
+            --> If the methods wants to create new class object, it can create
+                using the cls argument
+
+
+Descriptors--> #TODO
+
+

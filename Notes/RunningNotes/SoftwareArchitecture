@@ -8,7 +8,7 @@ Key principles of Design
 
 
 Redundancy:
-If one fails - get back to other. Nothing is shared.
+If one fails - 12get back to other. Nothing is shared.
 Each node is independent of other.
 #TODO Failover to happen automatically.
 

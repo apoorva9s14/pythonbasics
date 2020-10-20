@@ -2,9 +2,16 @@
 MetaClass defines the behaviour of class  just like
 Class defines the behaviour of instance
 
+Metaclass is same as type, it takes 3 inputs
+the classname you want to create
+Baseclasses of that class
+Attribute dict of the class
+These 3 inputs are passed to new of the metaclass, which inturn
+calls new of type super class
+
+__prepare__ is called at the very beginning
 If you define __call__ in Class, it makes the instance Callable
-MetaClass usecases - In Django,#TODODjango
-#TODO - https://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/
+
 """
 
 

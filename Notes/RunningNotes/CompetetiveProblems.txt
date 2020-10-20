@@ -1,0 +1,2 @@
+1. When solving problems, never assume anything beforehand, just by going through\
+    the examples. Always question each analysis you do.

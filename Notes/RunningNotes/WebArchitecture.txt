@@ -1,0 +1,4 @@
+DNS - domain name system
+    translates domain names to IP addresses
+
+https://engineering.videoblocks.com/web-architecture-101-a3224e126947

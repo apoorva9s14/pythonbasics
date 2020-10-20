@@ -41,4 +41,4 @@ D - Dependency Inversion Principle
     They should not be created based on the details of the child.
     They should be generic enough to be abstract
 
-#TODO - DRY, ACID
+#TODO - DRYres

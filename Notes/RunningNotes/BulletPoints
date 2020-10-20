@@ -29,3 +29,10 @@
     If max value is 10^5 , then we might get time limit exceeded error.
     So we have to chose the solution wisely, considering the time complexity.
     https://www.geeksforgeeks.org/knowing-the-complexity-in-competitive-programming/?ref=rp
+
+10. Always try to use global variables is possible, as accessing local variable
+    is faster than accessing global variables.
+
+11. If you are using a particular inbuilt function multiple times, assign it
+    to a local variable, so that we need not do builtin lookup which is slower
+    than local lookup.

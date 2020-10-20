@@ -5,8 +5,7 @@ n! = n * (n-1)!
 2. It should terminate at the base case
 How to identify a base case -
     At base case, the problem gets solved without recursion
-
-solution to a problem is based on solving smaller instances of the same problem.
+Solution to a problem is based on solving smaller instances of the same problem.
 
 Recursive vs Iterative
 Iterative iterates in a For Loop and arrives at the solution

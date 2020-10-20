@@ -19,7 +19,6 @@
     String - each char of string is in turn a string
     Deep Copy
 
-
 6. Static methods are a way to namespace your methods
    Class methods can be used as factory methods to create your own custom
    class objects. You can use the cls variable to create new objects
@@ -106,9 +105,12 @@
 20. Polymorphism
     We can differentiate between different items with the same name.
     Two types - Overloading, Overriding
-    Method overloading
+    Method overloading:
     Methods having the same name with different arguments
 
 21. Interfaces
     Interface is a set of publicly accessible methods on an object
 
+22. Sort method in python uses TimSort internally
+
+23.
