@@ -1,2 +1,37 @@
 1. When solving problems, never assume anything beforehand, just by going through\
     the examples. Always question each analysis you do.
+2. Use a hash map to speed up the search.
+3. Always be cautious about the edge cases.
+4. One-pass solution --> Iterate through the elements, and find the solution
+                         too while iterating
+5. Use filter, map, reduce wherever possible:
+    filtered_chars = filter(lambda ch: ch.isalnum(), s)
+
+6. Recursion takes up space to store the call stack.
+   To decrease the space complexity of recursion, use tail recursion.
+   To decrease the time complexity of recursion, use memoization.
+
+7. Use deque when you want to insert from the beginning of the list.
+   List insertion at the end is available by default.
+
+8. To know the alphabet position --> ord(alphabet) - ord('a')
+
+9. To reduce space complexity use two pointer approach
+
+10. from queue import PriorityQueue
+    pq.put(priority_value, queue_item)
+
+11. 3 pointer sort approach - Dutch national flag approach
+    use three pointers, low, mid, and high.
+    Index 0 to low - this is the "bottom group"
+    Index low to mid - this is the "middle group"
+    Index mid to high - this is the "top group"
+
+12. Bread first search - Queue
+    Depth first search - Stack
+
+13. Always focus on edge cases
+
+14. If you traverse the list twice, it is O(n) + O(n) ==> O(n)
+    For each element of the list, if you have to again traverse the list,
+    it is O(n^2)

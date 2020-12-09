@@ -67,6 +67,7 @@ List vs Stack vs Queue
     Queue - Breadth First Search
     Similarities
         Stack - insert and delete, List - push and pop
+        #Stack - one pointer
         Both happen in O(1)
         Every push pop in list doesnt need resizing
     Stacks and Queues don't allow for random access to objects
@@ -80,7 +81,7 @@ List vs Stack vs Queue
 
 Stacks
     All operations like push and pop are O(1)
-    Applications of Stack:
+    Appselications of Stack:
     Undo Redo Changes
     String reversal
 

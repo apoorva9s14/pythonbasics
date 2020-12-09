@@ -52,3 +52,24 @@ def iterative_factorial(n):
 
 
 print(iterative_factorial(5))
+
+
+# -------------------------------------------------------------------
+# Memoized Approach
+
+memo = {}
+
+def fact(n):
+    # print(n)
+    if n in memo:
+        # print("in memo", memo)
+        return memo[n]
+    elif n == 0:
+        return 1
+    else:
+        x = fact(n-1) * n
+        memo[n] = x
+        return x
+
+a = fact(10)
+b = fact(20)

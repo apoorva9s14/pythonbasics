@@ -16,7 +16,12 @@ Classmethods--> factory methods to create new objects
             --> If the methods wants to create new class object, it can create
                 using the cls argument
 
-
 Descriptors--> #TODO
+
+Sets, Dictionaries --> For effective search performance
+                   --> If repetitive search is needed
+                   --> When search performance is not a criteria, use other
+                   --> containers, as the time taken to setup the hashtable
+                   --> is an overhead
 
 

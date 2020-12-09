@@ -43,4 +43,9 @@ Sorting is important as a lot of algorithms work on sorted data
     Bruteforce Uses two for loops, sliding window slides across the input
     O(n*2) vs O(n)
 
-7. 
+7.  An in-place algorithm is an algorithm which transforms input using no
+    auxiliary data structure.
+
+8. Two Pointers Approach
+     Set one pointer in the beginning and one at the end and then
+     move them until they both meet.

@@ -1,6 +1,14 @@
-
+"""
+4 steps to reverse linked list:
+While traversing the linked list
+1. Store the current node's next Node.
+2. Then change the current nodes's next to Previous node
+3. Then assign the Previous node as current node
+4. Then assign the current node as the stored next Node in the first step
+"""
 class Node:
     """Each node in the linkedlist"""
+
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -19,10 +27,8 @@ class LinkedList:
     def __repr__(self):
         node = self.head
         nodes = []
-        # while node is not None:
         for node in self:
             nodes.append(str(node.data))
-            node = node.next
         nodes.append("None")
         return " -> ".join(nodes)
 
@@ -47,12 +53,30 @@ class LinkedList:
 
     def insert_at_end(self, node):
         self.check_if_valid_node(node)
-        # if not self.head:
-        #     self.head = node
-        #     return
         for current_node in self:
             pass
         current_node.next = node
+
+    def reverse(self):
+        # prev = None
+        # current = self.head
+        # while current:
+        #     next = current.next
+        #     current.next = prev
+        #     prev = current
+        #     current = next
+        #     print(prev.data)
+        # # print(self.head.data)
+        # self.head = prev
+        prev, _next = None, None
+        each = self.head
+        while each:
+            _next = each.next
+            each.next = prev
+            prev = each
+            each = _next
+            print(prev.data)
+        self.head = prev
 
 class CircularLinkedList(LinkedList):
     def __init__(self, nodes=None):
@@ -117,7 +141,6 @@ class DoublyLinkedList(LinkedList):
         nodes.append("None")
         return " <-> ".join(nodes)
 
-
     def insert(self, node):
         """TO insert Nodes at the beginning"""
         self.check_if_valid_node(node)
@@ -137,35 +160,57 @@ class DoublyLinkedList(LinkedList):
         node.prev = current_node
 
 
-# class TestRunner:
-#     def __init__(self, class_name, *args, **kwargs):
-#         self.class_name = class_name
-#         self.class_args = kwargs
-#         self.class_methods = args
-#         self.test_class_obj = class_name.__init__(**self.class_args)
-#         for each_meth in self.class_methods:
-#             self.test_class_obj.each_meth
+
+
+def sort_linked_list(linked_list_1):
+    nodes = []
+    for i in linked_list_1:
+        nodes.append(i.data)
+    nodes.sort()
+    return LinkedList(nodes=nodes)
+
+
+def merge_linked_lists(linked_list_1, linked_list_2):
+    # print(linked_list_1, linked_list_2)
+    for i in linked_list_2:
+        linked_list_1.insert_at_end(Node(i.data))
+
+
+def reverse_linked_list_in_place(linked_list_1):
+    new_head = None
+    head = linked_list_1.head
+    # for head in linked_list_1:
+    while head:
+        tmp = head.next
+        head.next = new_head
+        new_head = head
+        head = tmp
+    return linked_list_1
 
 
 if __name__ == "__main__":
     ########SingleLinkedlist#########
-    # new_linkedlist = LinkedList(nodes=[1,2,3])
+    new_linkedlist = LinkedList(nodes=[3, 1, 2])
+    # new_linkedlist_2 = LinkedList(nodes=[6, 4, 5])
+    # merge_linked_lists(new_linkedlist, new_linkedlist_2)
+    # print(sort_linked_list(new_linkedlist))
+    # reverse_linked_list_in_place(new_linkedlist)
+    # print(new_linkedlist)
+    new_linkedlist.reverse()
+    print(new_linkedlist)
+
+    # ########CircularLinkedList#######
+    # new_linkedlist = CircularLinkedList(nodes=[1, 2, 3])
     # new_linkedlist.insert(Node(0))
     # print(new_linkedlist)
     # new_linkedlist.insert_at_end(Node(4))
     # print(new_linkedlist)
-    ########CircularLinkedList#######
-    new_linkedlist = CircularLinkedList(nodes=[1, 2, 3])
-    new_linkedlist.insert(Node(0))
-    print(new_linkedlist)
-    new_linkedlist.insert_at_end(Node(4))
-    print(new_linkedlist)
-    for each in new_linkedlist:
-        print(each.data)
-
-    ########Doubly LinkedList#######
-    new_linkedlist = DoublyLinkedList(nodes=[1, 2, 3])
-    new_linkedlist.insert(Node(0))
-    print(new_linkedlist)
-    new_linkedlist.insert_at_end(Node(4))
-    print(new_linkedlist)
+    # for each in new_linkedlist:
+    #     print(each.data)
+    #
+    # ########Doubly LinkedList#######
+    # new_linkedlist = DoublyLinkedList(nodes=[1, 2, 3])
+    # new_linkedlist.insert(Node(0))
+    # print(new_linkedlist)
+    # new_linkedlist.insert_at_end(Node(4))
+    # print(new_linkedlist)
