@@ -6,3 +6,28 @@ There is no easy communication medium between threads. There is huge latency bet
 Threads have identity. There is TID which identifies each thread in a process.	goroutine do not have any identity. go implemented this because go does not have TLS(Thread Local Storage).
 Threads have significant setup and teardown cost as a thread has to request lots of resources from OS and return once it's done.	goroutines are created and destoryed by the go's runtime. These operations are very cheap compared to threads as go runtime already maintain pool of threads for goroutines. In this case OS is not aware of goroutines.
 Threads are preemptively scheduled (read here). Switching cost between threads is high as scheduler needs to save/restore more than 50 registers and states. This can be quite significant when there is rapid switching between threads.	goroutines are coopertively scheduled (read more). When a goroutine switch occurs, only 3 registers need to be saved or restored.
+
+
+threads vs goroutines
+Imagine you have a web server where you are handling 1000 requests per minute. 
+If you had to run each request concurrently, that means you need to create 1000 threads or divided them under 
+different processes. That’s how Apache server manages incoming requests. 
+If an OS thread consumes 1MB stack size per thread, that means you will exhaust 1GB of RAM for that traffic. 
+Apache provides ThreadStackSize directive to manage stack size per thread but still, you have no idea if you run into 
+a problem because of this.
+In the case of goroutines, since stack size can grow dynamically, you can spawn 1000 goroutines without a problem. 
+As a goroutine starts with 8KB (2KB since Go 1.4) of stack space, most of them generally don’t grow bigger than that. 
+But if there is a recursive operation that demands more memory, Go can increase stack size up to 1GB which I hardly 
+think will ever happen except for {} which is obviously a bug.
+Also, rapid switching between goroutines is possible and more efficient compared to threads as we saw earlier. 
+Since one goroutine is running on one thread at a time and goroutines are cooperatively scheduled, another goroutine 
+is not scheduled until current goroutine is blocked. If any Goroutine in that thread blocks say waiting for user input,
+ then another goroutine is scheduled in its place. goroutine can block on one of the following conditions:
+network input
+sleeping
+channel operation
+blocking on primitives in the sync package
+If the goroutine does not block on one of these conditions, it can starve the thread on which it was multiplexed, 
+between them which we will learn in upcoming lessons. This will prevent race conditions and inappropriate access 
+to shared data between them as opposed to accessing the shared memory in case of threads.
+

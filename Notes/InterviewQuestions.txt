@@ -1,0 +1,54 @@
+https://www.geeksforgeeks.org/microsoft-interview-experience-4-5-years-experienced/
+https://www.geeksforgeeks.org/merging-intervals/
+Design a distributed printing system
+Designing some cloud processing systemDesign an LRU cache
+Design a logging system in windows
+clone a bst with min space requiremet
+ Given a boolean 2D matrix, find the number of islands.
+2. Some multithreading related questions.
+3. difference between process and thread.
+4. 32 and 64 processor working.
+5. Inter thread communication techniques.
+Given two strings S1 and S2, return true if S2 contains the permutation of s1. If S1's permutation is the substring of S2.
+Design an Auto-Scale System. Design the system on a high level completely. Design api, database, services, components etc.
+System design for online word/spreadsheet where users can post dynamically and others can see it concurrently
+minimum window substring. find all words in a string with minimum length.
+Given a snapshot of Chessboard, find out if king is under attack
+a. Design the dropbox/g drive client
+b. Print a b tree in zig zag order
+Design a API throttling system
+Design Scalable Job scheduling system. After high level design he asked me to design DB tables
+Design a scalable files server such as SharePoint.
+Binary search tree in-order successor
+Convert hex string to integer
+How to approach finding words from a dictionary of valid words in a grid of letters.
+find the locations of an optimal meeting point between points on a matrix.
+1) Alien dictionary from leetcode
+2) Dropbox design
+Word wrap pattern implementation
+Design a Library. 
+word reverse with preserved white space
+1) replace blank spaces in a string with % with no extra space
+2) rotate 2 D array by next 2 positions .
+3) find if graph is acyclic
+4) find Kth position between two given nodes
+For eg 1->2->3->4->5
+Node 2 and 4 are inputs , and K is 4 return -1 as only one element lies in between 3 .
+the game Battleship.
+Given the arrival and departure time of trains, you have to find out the minimum number of platforms needed to accommodate all the trains in a day
+job scheduler design and implementation
+an algorithm to determine if a given string can be described as interpolation of 2 predefined strings.The racehorse problem: given 25 horses and no stopwatch, and you can only race 5 horses at the same time, how few races does it take to find the fastest horse?Algorithms to detect palindromes and calculate certain "magic" numbers. How to model some kind of bicycle workshop businessCreate a linkedlist structure and write a method to reverse it in place1. Design elevator [How many elevators do you need for n storied building]Phone Interview:2 2. Figure out whether the given Tree is BST or not.in a given 2 D plane, how will you find that given co-ordinate lies in within a rectangle in 2D plane.determine common ancestor of a node in a binary tree.
+Max range of index (I,j) of array that maximize sum(I,j), and analyze time & space complexity.
+Longest common sequence
+A queue with int numbers adding to the tail. Implement a method to get median of all int numbers in the queue. Analyze complexity.
+Implement a queue in any language backed by an array. Explain how to test.
+Implement a method to parse a string into an integer. Detect overflow.
+Write code about binary search
+There is stack of disk on a plate. All of the disks are having a different radius. What is the best way to sort these disk so that largest come at the bottom?
+There is MxN matrix. Write a program to print matrix node in spiral fashion?
+There is a balanced binary tree. Write a program to print sum of mirror image node in inorder fashion.
+There are 2 numbers M and N given. Write a program to find number of bits need to be flipped in M to convert it into N.
+Designing a system for a tennis tournament. How to represent players, winners and losers at each stage, how to represent a game between two players. After everything was done they asked me how to create a parallel tournament for all the players who lost in each level and have a winner and loser seleced in the finals for them
+Design a Scamble board game.
+Think about various approaches of reversing a linked list. Pros and Cons.
+https://www.interviewbit.com/search/?q=Microsoft

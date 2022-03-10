@@ -7,10 +7,11 @@ Have a logical start and logical end
 Arrays:
     Contiguous memory
     Random Access
-    Tightly packed,hence performance optimised
+    Tightly packed, hence performance optimised
 
 Linked lists:
     can be used to implement Stacks, Queues, Graphs
+    Linked lists have Nodes, Nodes have data and pointer to the next node.
 Difference between linkedlists and arrays:
     Linked lists - sequential access
     Arrays - Random access
@@ -20,6 +21,8 @@ Difference between linkedlists and arrays:
     linked list - dispersed
     Memory efficiency is better in linked lists, because we dont need to give
     predefined memory, but more memory is needed for storage of linked list
+    Arrays need to have predefined size
+    
 
 
 Real world analogies of each data structure
@@ -44,7 +47,7 @@ Python Lists
     Arrays are space efficient
     Lists are also allocated contiguous chunks of memory
     If the list grows in size,the append operation will need reallocation of memory
-    Because the memory is contiguous, fast access of random elements,slicing is also faster.
+    Because the memory is contiguous, fast access of random elements, slicing is also faster.
 
 Deque
     collections.deque is similar to lists except that insert and remove is faster on both the ends.
@@ -81,12 +84,13 @@ List vs Stack vs Queue
 
 Stacks
     All operations like push and pop are O(1)
-    Appselications of Stack:
+    Applications of Stack:
     Undo Redo Changes
     String reversal
 
 Queues
     To maintain order
+    It is thread safe
 
 Hashing
     Hashing helps in fast lookup as the data is stored as key value pair
@@ -102,7 +106,7 @@ Hashing
     The goal of encoding is not to obscure data for any security purpose
 
 ########### Non-Linear DataStructures #############
-Organises the data hierarchically
+Organises the data hierarcally
 
 Tree
     A tree is a collection of nodes.

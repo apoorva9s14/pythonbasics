@@ -16,6 +16,16 @@ All the threads will share the same heap, so there needs to be coordination betw
 On a function call, stack is allocated. Once the call completes, stack will be deleted.
 Data on the heap will remain there until it’s manually deleted by the programmer.
 
+What is a CallStack:
+CallStack is a datastructure which tells us at what point of execution are we in the function.
+If we encounter a function definition we place it in the stack.
+If we encounter a function return statement we pop it from the stack.
+
+What is Stackoverflow:
+Stack gets filled up and overflows and the OS says Stacklimit exceeded, you might not intend to 
+do this, so it will close the process for us to let us figure out where the mistake is.
+
+
 Useful URLs:
 http://www.programmerinterview.com/operating-systems/how-virtual-memory-works/
 

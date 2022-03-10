@@ -36,3 +36,5 @@ NoSQL databases follow BASE principles:
 Basically Available, Soft State, Eventual consistency
 
 https://medium.com/system-design-blog/cap-theorem-1455ce5fc0a0
+
+Database Sharding
