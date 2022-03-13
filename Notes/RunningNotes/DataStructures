@@ -106,7 +106,7 @@ Hashing
     The goal of encoding is not to obscure data for any security purpose
 
 ########### Non-Linear DataStructures #############
-Organises the data hierarcally
+Organises the data hierarchally
 
 Tree
     A tree is a collection of nodes.
@@ -114,13 +114,17 @@ Tree
     Each node contains a value or data.
     Root - branches - leaves
     Height of the NODE --> length of the longest path from NODE to the deepest leaf
+                       -->  Depth of deepest node
     Depth of the NODE --> length of the path to its root
+                      --> number of edges from root to the node
     Height of the TREE --> height of the node, where node is root
 
 Binary Tree
     Each node has at the most two children.
     Each node has three attributes: value, left_child, and right_child.
 
+Binary Search Tree
+    Same as binary tree but left_child > node > right_child
 Insertion in Tree:
     If the left child node exists, replace that node with the new node
     Add the existing left child node as the new node's left child node
@@ -134,6 +138,13 @@ Traversal in Tree:
     In-order    = left child, Node, right child
     Post-order  = left child, right child, Node
 
+    Always remember the Order is wrto Node
+
+    Level order traversal - Breadth first traversal - Cover the nodes along the breadth first, then go to next level
+    Uses of traversals:
+    Pre-order:  To create a copy of a tree.
+    In-order:   To get values in non-decreasing order in a BST
+    Post-order: To delete a tree from leaf to root
 When to use each data structure:
 You only have a few (2-3) fields:
 plain tuple
