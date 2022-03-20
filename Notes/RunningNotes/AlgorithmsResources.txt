@@ -12,3 +12,5 @@ https://doc.lagout.org/science/0_Computer%20Science/2_Algorithms/Essential%20Alg
 https://javascript.plainenglish.io/reducing-complexities-with-sliding-window-algorithm-6fc3fb083abf
 LRU Cache
 https://www.interviewcake.com/concept/java/lru-cache
+https://www.programiz.com/dsa/avl-tree
+https://afteracademy.com/blog/heap-building-and-heap-sort

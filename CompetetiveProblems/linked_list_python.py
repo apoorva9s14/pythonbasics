@@ -75,7 +75,7 @@ class LinkedList:
             each.next = prev
             prev = each
             each = _next
-            print(prev.data)
+            # print(prev.data)
         self.head = prev
 
 class CircularLinkedList(LinkedList):
