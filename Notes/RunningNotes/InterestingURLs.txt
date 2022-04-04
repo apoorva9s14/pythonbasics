@@ -1,3 +1,4 @@
 http://www.laurentluce.com/posts/category/python/
 Idiomatic Python
 https://docs.python-guide.org/writing/style/#idioms
+https://www.ibm.com/garage/method/practices/manage/build-for-reliability/

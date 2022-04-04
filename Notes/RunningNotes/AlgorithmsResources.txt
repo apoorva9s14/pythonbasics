@@ -14,3 +14,6 @@ LRU Cache
 https://www.interviewcake.com/concept/java/lru-cache
 https://www.programiz.com/dsa/avl-tree
 https://afteracademy.com/blog/heap-building-and-heap-sort
+http://www.liacs.nl/~deutz/DS/september28.pdf
+https://igotanoffer.com/blogs/tech/latency-throughput-availability-system-design-interview - Go to Learn Concepts section
+https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/scaling_aws/README.md

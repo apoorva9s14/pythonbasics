@@ -113,4 +113,6 @@
 
 22. Sort method in python uses TimSort internally
 
-23.
+23. Difference between python dictionary and heapdict.heapdict is
+    popitem() removes and returns the key with lowest priority
+    similarly peekitem() returns the lowest priority key without removing it.

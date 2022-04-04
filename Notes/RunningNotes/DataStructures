@@ -140,6 +140,7 @@ Traversal in Tree:
 
     Always remember the Order is wrto Node
 
+    All the above are Depth firt searches. Level order is breadth first.
     Level order traversal - Breadth first traversal - Cover the nodes along the breadth first, then go to next level
     Uses of traversals:
     Pre-order:  To create a copy of a tree.
