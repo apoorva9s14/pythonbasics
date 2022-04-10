@@ -17,3 +17,5 @@ https://afteracademy.com/blog/heap-building-and-heap-sort
 http://www.liacs.nl/~deutz/DS/september28.pdf
 https://igotanoffer.com/blogs/tech/latency-throughput-availability-system-design-interview - Go to Learn Concepts section
 https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/scaling_aws/README.md
+            
+https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed

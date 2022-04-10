@@ -1,0 +1,21 @@
+###################### Group By ########################
+all rows containing that particular column value will be merged
+into single row.
+A 1
+B 2
+C 3
+A 2
+B 5
+
+would become:
+A 3
+B 7
+C 3
+
+###################### Order By ########################
+all rows will be arranged based on the column value in ASC or DESC
+LIMIT would limit the number of rows returned
+OFFSET would offset the rows by the number given, here indexing starts at 0.
+
+LIMIT 1 OFFSET 2;
+will return 1 row at the 3rd index

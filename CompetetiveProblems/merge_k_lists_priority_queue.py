@@ -14,13 +14,15 @@ class Solution(object):
         for l in lists:
             if l:
                 q.put((l.val, l))
-        while not q.empty():
+        if not q.empty():
             val, node = q.get()
-            point.next = ListNode(val)
-            point = point.next
+            head = ListNode(node)
+        while head:
+            val, node = q.get()
+            head.next = node
             node = node.next
             if node:
-                q.put((node.val, node))
+                q.put((node))
         return head.next
 
 s = Solution()

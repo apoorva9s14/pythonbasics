@@ -12,7 +12,7 @@ def fib_recursive(n):
         return fib_recursive(n-1) + fib_recursive(n-2)
 
 
-print("Recursive Fibonacci", fib_recursive(6))
+# print("Recursive Fibonacci", fib_recursive(6))
 
 
 def fib_iterative(n):
@@ -22,28 +22,22 @@ def fib_iterative(n):
     return a
 
 
-print("Iterative Fibonacci", fib_iterative(6))
+# print("Iterative Fibonacci", fib_iterative(6))
 
 
 class FibMemoised:
     memo = {0: 0, 1: 1}
 
     def fibm (self, n):
-        self.n = n
-        print(self.n)
-        if not self.n in FibMemoised.memo:
-            FibMemoised.memo[self.n] = self.fibm(self.n - 1) + self.fibm(self.n - 2)
-        return FibMemoised.memo[self.n]
-
-    def fibm_old (self, n):
-        print(n)
-        if not n in FibMemoised.memo:
-            FibMemoised.memo[n] = self.fibm(n - 1) + self.fibm(n - 2)
-        return FibMemoised.memo[n]
-
+        print(FibMemoised.memo)
+        if n == 1 or n== 0:
+            return n
+        if not FibMemoised.memo.get(n):
+            FibMemoised.memo[n] = self.fibm(n-1) + self.fibm(n-2)
+        return FibMemoised.memo[n] 
 
 mem_fib = FibMemoised()
-# print("Memoized Fibonacci old", mem_fib.fibm(6))
+print("Memoized Fibonacci", mem_fib.fibm(6))
 
 
 def fib_multiples_recursive(n):
@@ -54,7 +48,7 @@ def fib_multiples_recursive(n):
         #  HINT--> Multiplication as recursive addition
 
 
-print("Recursive Multiplication", fib_multiples_recursive(12))
+# print("Recursive Multiplication", fib_multiples_recursive(12))
 
 
 def sum_of_first_n_integers_recursive(n):
@@ -64,4 +58,4 @@ def sum_of_first_n_integers_recursive(n):
         return sum_of_first_n_integers_recursive(n-1) + n
 
 
-print("Recursive Sum", sum_of_first_n_integers_recursive(4))
+# print("Recursive Sum", sum_of_first_n_integers_recursive(4))
