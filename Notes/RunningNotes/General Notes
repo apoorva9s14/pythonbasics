@@ -15,7 +15,6 @@
     with copies of the child objects found in the original.
 
 5. Example of recursion -
-    Condition to stop Recursion
     String - each char of string is in turn a string
     Deep Copy
 
@@ -105,8 +104,10 @@
 20. Polymorphism
     We can differentiate between different items with the same name.
     Two types - Overloading, Overriding
-    Method overloading:
+    Method Overloading:
     Methods having the same name with different arguments
+    Method Overriding:
+    Runtime polymorphism, wherein an inherited class can override a parent method
 
 21. Interfaces
     Interface is a set of publicly accessible methods on an object

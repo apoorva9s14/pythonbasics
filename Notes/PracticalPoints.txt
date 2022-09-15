@@ -1,0 +1,1 @@
+RAM Memory access is faster than disk access, so when storing in disk use the data structure which reduces the number of accesses.

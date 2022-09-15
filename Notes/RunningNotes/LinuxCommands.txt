@@ -1,0 +1,12 @@
+df - disk free
+h - human readable
+man - manual
+env - current environment
+touch - create empty file
+
+
+
+
+
+tac - file content in reverse order
+more vs cat - more gives ability to scroll

@@ -1,0 +1,33 @@
+Resource controller -  controlling and tracking the lifecycle of resources in a customer account. 
+Resource - could be any service that can be provisioned.
+
+Provisioning (creating an "instance")
+binding (creating access credentials) 
+Unbinding (removing access) 
+Deprovisioning (deleting an "instance")
+
+Service brokers manage the lifecycle of services.
+Platforms interact with service brokers to provision, get access to and manage the services they offer. 
+
+OSB (Open serice broker) spec:
+OSB Api defines the interaction of service broker with platform so that any software provider
+can offer serivces in the platform.
+
+Types of resources:
+1. provision-through - Service broker following OSB spec manages resource lifecycle
+2. provision-behind - Another API manages resource lifecycle
+
+Aliases:
+Symlinks that hold reference to a remote resource and enable interoperability and reuse of a resource instance across the platform. 
+For example, you can create an instance of a service in a resource group and then reuse it from any available Cloud Foundry region by creating an alias in an org/space in those regions.
+
+Scoped Token:
+Scoped token helps to delegate some of your permissions to another user.
+Scoped token identifies as a user but is limited to a set of actions by its scope.
+
+IAM - Identify, authenticate, and authorize
+Difference between Authenticate and Authorize:
+    Authentication verifies if the users really are who they represent themselves to be. 
+    Authorization determines what resources a user can access,
+        user permission to access different levels of information.
+    Authorization takes place after Authentication.

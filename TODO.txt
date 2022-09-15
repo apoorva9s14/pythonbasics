@@ -1,4 +1,4 @@
-How list.sort works in python
+
 https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/practice-problems/algorithm/vowel-game-f1a1047c/submissions/
 Binary Heap tree:
     https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt

@@ -8,7 +8,6 @@ While traversing the linked list
 """
 class Node:
     """Each node in the linkedlist"""
-
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -23,7 +22,7 @@ class LinkedList:
             for elem in nodes:
                 node.next = Node(data=elem)
                 node = node.next
-
+    
     def __repr__(self):
         node = self.head
         nodes = []
@@ -31,32 +30,32 @@ class LinkedList:
             nodes.append(str(node.data))
         nodes.append("None")
         return " -> ".join(nodes)
-
+    
     def __iter__(self):
         """To traverse the linked list"""
         node = self.head
         while node:
             yield node
             node = node.next
-
+    
     @staticmethod
     def check_if_valid_node(node):
         if type(node) != Node:
             raise ValueError
-
+    
     def insert(self, node):
         """TO insert Nodes at the beginning"""
         self.check_if_valid_node(node)
         prev_head = self.head
         self.head = node
         self.head.next = prev_head
-
+    
     def insert_at_end(self, node):
         self.check_if_valid_node(node)
         for current_node in self:
             pass
         current_node.next = node
-
+    
     def reverse(self):
         # prev = None
         # current = self.head

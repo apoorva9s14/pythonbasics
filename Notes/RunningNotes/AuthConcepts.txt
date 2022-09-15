@@ -1,0 +1,8 @@
+How when logging in to one website, you can automatically lgin to other
+1. Happens via token
+Oauth - provides clients a "secure delegated access" to server resources on behalf of a resource owner. It specifies a process for resource owners to authorize third-party access to their server resources without providing credentials. 
+
+OAuth is not an API or a service: it’s an open standard for authorization and anyone can implement it.
+
+More specifically, OAuth is a standard that apps can use to provide client applications with “secure delegated access”. OAuth works over HTTPS and authorizes devices, APIs, servers, and applications with access tokens rather than credentials.
+https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth

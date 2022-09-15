@@ -35,3 +35,5 @@
 14. If you traverse the list twice, it is O(n) + O(n) ==> O(n)
     For each element of the list, if you have to again traverse the list,
     it is O(n^2)
+
+15. List comprehension is a powerful tool, use it to your advantage.

@@ -30,7 +30,7 @@
     So we have to chose the solution wisely, considering the time complexity.
     https://www.geeksforgeeks.org/knowing-the-complexity-in-competitive-programming/?ref=rp
 
-10. Always try to use global variables is possible, as accessing local variable
+10. Always try to use local variables is possible, as accessing local variable
     is faster than accessing global variables.
 
 11. If you are using a particular inbuilt function multiple times, assign it

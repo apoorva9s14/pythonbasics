@@ -50,14 +50,15 @@ Python Lists
     Because the memory is contiguous, fast access of random elements, slicing is also faster.
 
 Deque
-    collections.deque is similar to lists except that insert and remove is faster on both the ends.
+    collections.deque is similar to linked lists except that insert and remove is faster on both the ends.
     Deque is based on doubly linked list implementation.
     Random access is slow with deque as we need to track the nodes from beginning
 
 
     ############Time Complexity##############
     In lists, adding/removing new items need O(n) complexity
-    Setting values O(1) complexity.
+    because the whole list needs to be arranged to a new place if space is not sufficient.
+    Getting and Setting values O(1) complexity.
     Finding length of list is also O(1)
 Set
     Union Intersection Difference Subset
@@ -66,21 +67,27 @@ Set
 List vs Stack vs Queue
     Stack - LIFO
     Queue - FIFO
-    Stack - Depth First Search
-    Queue - Breadth First Search
+    Depth First Search uses Stack
+    Breadth First Search uses Queue
     Similarities
         Stack - insert and delete, List - push and pop
         #Stack - one pointer
         Both happen in O(1)
-        Every push pop in list doesnt need resizing
+        Every push pop in list doesn't need resizing
     Stacks and Queues don't allow for random access to objects
     collections.deque   -  insert and remove on both the sides
                         -  doubly linked list
     Priority Queue  -  Instead of retrieving the next element by insertion
                        time, a priority queue retrieves the
                        highest-priority element.
+                       It is based on heap, so insertion and deletion is O(logn)
     List cannot be used as Queue as, adding/removing elements to the beginning
     needs list resizing
+
+    Syntax:
+    from queue import PriorityQueue
+    q.put(1,"pop") --> 1 is the topmost priority
+    q.get()
 
 Stacks
     All operations like push and pop are O(1)
@@ -106,7 +113,7 @@ Hashing
     The goal of encoding is not to obscure data for any security purpose
 
 ########### Non-Linear DataStructures #############
-Organises the data hierarchally
+Organises the data hierarchaly
 
 Tree
     A tree is a collection of nodes.
@@ -140,7 +147,7 @@ Traversal in Tree:
 
     Always remember the Order is wrto Node
 
-    All the above are Depth firt searches. Level order is breadth first.
+    All the above are Depth first searches. Level order is breadth first.
     Level order traversal - Breadth first traversal - Cover the nodes along the breadth first, then go to next level
     Uses of traversals:
     Pre-order:  To create a copy of a tree.

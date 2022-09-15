@@ -10,7 +10,7 @@ Stack size of go is managed in run-time and can grow up to 1GB which is possible
 
 There is no easy communication medium between threads.
 There is huge latency between inter-thread communication.
-goroutine use channels to communicate with other goroutines with low latency (read more).
+goroutine use channels to communicate with other goroutines with low latency.
 
 Threads have identity. There is TID which identifies each thread in a process.
 goroutine do not have any identity. go implemented this because go does not have TLS(Thread Local Storage).

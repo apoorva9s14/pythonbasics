@@ -1,0 +1,16 @@
+Object-oriented programming:
+Data Attributes + Methods = Object
+
+Encapsulation
+Abstraction
+Inheritance
+Polymorphism
+
+
+Encapsulation:
+Binding the data and functions into a single unit, the class, we can hide the
+private details of a class from the outside world
+When we cannot access private data directly, we say that it is well encapsulated.
+
+Abstraction:
+Abstract implementation details of class and just expose easy to use interface.

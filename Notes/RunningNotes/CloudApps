@@ -4,28 +4,33 @@ The application is deployable in cloud
 Portable across environments
 Scalable without major changes
 
-I. Codebase
+
+"ABBBCCCDDDLP"
+
+Admin processes
+Run admin/management tasks as one-off processes
+Build, release, run
+Strictly separate build and run stages
+Backing services
+Treat backing services as attached resources
+Binding
+Export services via port binding
+Codebase
 One codebase tracked in revision control, many deploys
-II. Dependencies
+Config
+Store config in the environment
+Concurrency
+Scale out via the process model, Horizontal scaling
+Dev/prod parity
+Keep development, staging, and production as similar as possible
+Dependencies
 dependencies should not be part of codebase, it can be put in
 manifest and requirements file
-III. Config
-Store config in the environment
-IV. Backing services
-Treat backing services as attached resources
-V. Build, release, run
-Strictly separate build and run stages
-VI. Processes
-Execute the app as one or more stateless processes
-VII. Port binding
-Export services via port binding
-VIII. Concurrency
-Scale out via the process model
-IX. Disposability
+Disposability
 Maximize robustness with fast startup and graceful shutdown
-X. Dev/prod parity
-Keep development, staging, and production as similar as possible
-XI. Logs
+Logs
 Treat logs as event streams
-XII. Admin processes
-Run admin/management tasks as one-off processes
+Processes
+Execute the app as one or more stateless processes
+
+https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser

@@ -1,0 +1,17 @@
+##########  Data Structures  ##########
+LinkedList
+Stack
+HashMap
+Deque
+PriorityQueue
+heap
+Binary Search
+Two pointer
+Sliding window
+
+
+##########  System Design  ##########
+Circuit Breaker
+SinglePointofFailure
+Data Loss
+Coupled Decoupled
