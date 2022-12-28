@@ -16,16 +16,14 @@ def binary_search(nums, target):
             return pivot
 
         elif target > pivot_item:    # if target is to the right
+            
             left = pivot + 1
-
-            # shift the left partition to the next
-            # item after pivot
+            print(nums[left:right+1])
 
         else:    # if target is to the left
             right = pivot - 1
+            print(nums[left:right+1])
 
-            # shift the right partition to the previous
-            # item before pivot
     return None
 
 

@@ -1,0 +1,39 @@
+"""
+[45, 65, 15, 5, 25, 75, 85, 35]
+window_size = 3
+
+[65, 65, 25, 75, 85, 85]
+
+"""
+
+
+def findMaxInWindow(l,w):
+    res = []
+    size = w
+    n = len(l)
+    i = 0
+    slice = l[i:w]
+    curMax, startIndex = max(slice), 0
+    maxIndex = slice.index(curMax)
+    # res.append(curMax)
+    while w <= n:
+        if startIndex < maxIndex <= w-1:
+            # 1, 1, 3
+            # 1
+            if curMax > l[w-1]:
+                res.append(curMax)
+            else:
+                res.append(l[w-1])
+                curMax = l[w-1]
+                maxIndex = w - 1
+        else:
+             slice = l[startIndex:startIndex+size]
+             curMax = max(slice)
+             maxIndex = l.index(curMax)
+             res.append(curMax) 
+        startIndex += 1
+        w += 1
+    return res
+
+
+print("The output is", findMaxInWindow([45, 65, 15, 5, 25, 75, 85, 35], 3))

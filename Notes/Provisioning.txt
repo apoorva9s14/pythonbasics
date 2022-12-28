@@ -31,3 +31,21 @@ Difference between Authenticate and Authorize:
     Authorization determines what resources a user can access,
         user permission to access different levels of information.
     Authorization takes place after Authentication.
+
+The IBM® cloud platform combines platform as a service (PaaS) with infrastructure as a service (IaaS) to provide an integrated experience. 
+
+The Open Service Broker API defines an HTTP(S) interface between Platforms and Service Brokers
+
+Service Broker: Service Brokers manage the lifecycle of Services. 
+Platforms interact with Service Brokers to provision, and manage, Service Instances and Service Bindings.
+
+The first endpoint that a Platform will interact with on the Service Broker is the service catalog (/v2/catalog). This endpoint returns a list of all services available on the Service Broker. 
+
+provisioning (creating an instance)
+binding (creating access credentials) 
+unbinding (removing access)
+de-provisioning (deleting an instance)
+
+Cloud foundry has a resource tied to a specific region as a limitation. RC does not have such limitation, hence it is cloud foundry agnostic.
+
+ Resource Controller has PaaS resources. resource groups are containers to manage paas resources

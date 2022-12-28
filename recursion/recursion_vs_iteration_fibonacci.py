@@ -33,7 +33,10 @@ class FibMemoised:
         if n == 1 or n== 0:
             return n
         if not FibMemoised.memo.get(n):
+            print("memoizing fib", n)
             FibMemoised.memo[n] = self.fibm(n-1) + self.fibm(n-2)
+        else:
+            print("returning memoized fib", n)
         return FibMemoised.memo[n] 
 
 mem_fib = FibMemoised()

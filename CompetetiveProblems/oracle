@@ -1,0 +1,167 @@
+"""
+//
+// Given a linked list
+// input = 1 2 3 4 
+// output = 1 4 2 3
+//
+// 1 2 3 9 5 6 7
+//  1 7 2 6 3 5 9
+1 2 3 4 5
+1 7 2 6 3 5 4
+
+"""
+class Node:
+    def __init__(self, val, nextNode):
+        self.val = val
+        self.next = nextNode
+    
+class LinkedList:
+    def __init__(self, inp_list):
+        self.head = Node(inp_list[0], None)
+        self.inp_list = inp_list
+    def addElem(self):
+        tmp = self.head
+        for each in self.inp_list[1:]:
+            nextNode = Node(each, None)
+            tmp.next = nextNode
+            tmp = nextNode
+    def __repr__(self):
+        head = self.head
+        while head:
+            print(head)
+            head = self.next
+            
+inp_list = LinkedList([1,2, 3, 9, 5, 6, 7])
+inp_list.addElem()
+
+def get_modified_list(inp_list):
+    # n = len(inp_list)
+    n = 7
+    out_list=[None]*n
+    tmp = inp_list.head
+    for i in range(0,n):
+        if i%2 == 0:
+            out_list[i//2 + 1] = tmp
+            j = i
+            while j < n-1-i and tmp:
+                tmp = tmp.next
+    for i in range(0,n):
+        if i%2 == 1:
+            j = i
+            while j < n-1 and tmp:
+                tmp = tmp.next
+            out_list[i] = tmp
+    return out_list
+print(get_modified_list(inp_list))
+            
+def merge_sort_list(n):
+    l = len(n)
+    mid = l // 2
+    tmp1 = n[:mid]
+    tmp2 = n[mid:]
+    # print(tmp1, tmp2)
+    while len(tmp1) > 2 and len(tmp2) > 2:
+        out_list = merge_sort_list(tmp1) + merge_sort_list(tmp2)
+    tmp1.sort()
+    tmp2.sort()
+    out_list = tmp1 + tmp2
+    
+    return sorted(out_list)
+        
+print(merge_sort_list([1,6,5,2,3])) 
+//
+class FileLogger
+class ConsoleLogger
+class DatabaseLogger
+
+class Logger:
+    def __init__(self, content, type_of_logger):
+        switch case type_of_logger:
+            FileLogger
+
+Logger(content, file)
+
+group_by emp_id
+
+
+"""
+/*
+
+String get(int key)
+
+void put(int key, String value)
+
+O(1) - 
+
+O(1) - 
+size= 4
+
+
+5 -> "ashis"
+
+2 -> 
+
+
+5, 2, 3, 7
+
+
+5
+
+2
+
+8
+
+
+5, 2, 7, 8
+
+
+4
+2, 3, 7, 4
+2
+
+9
+
+2, 3, 7 ,9
+
+4
+
+2, 7 , 9, 4
+
+
+
+
+
+
+*/
+
+"""
+
+localCache = {0:{5:"x"}, 1:{2:"y"}, 2:{3:"z"}, 3:{4:"a"}}
+
+def put_key(key, val):
+    n = len(localCache)
+    evictedKey = localCache.get(())
+    if n < 4:
+        localCache[3] = {key: val}
+    elif n == 4:
+        evictedKey = localCache.get(0)
+        lru_eviction(evictedKey)
+        localCache[key] = val
+def get_key(key):
+    for i in localCache:
+            keyMap = localCache.get(i)
+            if keyMap.has(key):
+                val = keyMap.get(key)
+    n = len(localCache)
+    localCache[n-1]=keyMap
+    
+    return val
+def lru_eviction(evictedKey):
+    localCache.remove(evictedKey)
+    
+    
+        
+    
+
+
+

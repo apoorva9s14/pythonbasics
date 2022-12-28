@@ -1,0 +1,20 @@
+Users
+Post
+Reaction
+
+
+Users Table:
+UserId - Primary Key
+Followers - userIds
+
+Post Table
+PostId - UUID - Primary Key
+UserId - Foreign Key
+
+
+Reaction Table:
+Reaction Id - UUID
+Reaction Type - Like, Dislike and so on.
+UserId - Foreign Key
+Post Id - Foreign Key
+

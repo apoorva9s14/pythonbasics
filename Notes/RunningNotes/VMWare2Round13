@@ -1,0 +1,92 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'counts' function below.
+#
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY teamA
+#  2. INTEGER_ARRAY teamB
+#
+# teamA empty or teamB empty
+# teamB length to be matched with o/p
+# 
+def counts(teamA, teamB):
+    # Write your code here
+    # Sort teamA
+    res = []
+    teamA.sort()
+    for each in teamB:
+        ptr = find_elem_index_binary_search(teamA, each)
+        print(teamA[:ptr+1])
+        res.append(len(teamA[:ptr+1]))
+    return res
+    
+def find_elem_index_binary_search(l,elem):
+    # [1,1,1,1]
+    # [1,1]
+    # [1,1]
+    a = len(l)
+    right_ptr = a - 1
+    left_ptr = 0
+    
+    # [1,2,3,5]
+    # [2,4]
+    ref_ptr = None
+    while left_ptr <= right_ptr:
+        mid_ptr = (right_ptr+left_ptr)//2
+        mid = l[mid_ptr]
+        if elem < mid:
+            right_ptr = mid_ptr - 1
+        elif elem > mid:
+            left_ptr = mid_ptr + 1
+        else:
+            ref_ptr = mid_ptr
+            return ref_ptr
+    if not ref_ptr:
+        if elem > l[a-1]:
+            ref_ptr = a-1
+        if elem < l[0]:
+            ref_ptr = 0
+    return ref_ptr
+    
+            
+print(counts([5,5,5,5], [2,4]))            
+            
+        
+        
+    
+
+
+# if __name__ == '__main__':
+#     fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+#     teamA_count = int(input().strip())
+
+#     teamA = []
+
+#     for _ in range(teamA_count):
+#         teamA_item = int(input().strip())
+#         teamA.append(teamA_item)
+
+#     teamB_count = int(input().strip())
+
+#     teamB = []
+
+#     for _ in range(teamB_count):
+#         teamB_item = int(input().strip())
+#         teamB.append(teamB_item)
+
+#     result = counts(teamA, teamB)
+
+#     fptr.write('\n'.join(map(str, result)))
+#     fptr.write('\n')
+
+#     fptr.close()
