@@ -8,6 +8,7 @@ class Solution:
                 helper(left + 1, right - 1)
 
         helper(0, len(s) - 1)
+        print(s)
 
 
 s=Solution()

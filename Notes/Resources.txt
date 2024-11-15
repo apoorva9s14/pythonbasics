@@ -1,1 +1,2 @@
 https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/
+https://docs.python-guide.org/writing/style/#idioms

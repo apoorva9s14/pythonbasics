@@ -22,7 +22,7 @@ class Solution:
         return "true"
         
 s = Solution()
-print(s.rotateString("abcde", "abced"))
+print(s.rotateString("abcde", "deabc"))
 
 
 

@@ -20,4 +20,4 @@ class Solution:
             return "Yes"
         return "No"
 s = Solution()
-print(s.isPossible("meayl"))
+print(s.isPossible("nalan"))
