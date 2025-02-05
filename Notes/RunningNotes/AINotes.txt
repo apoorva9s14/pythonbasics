@@ -1,0 +1,11 @@
+Feed the information
+Langchain
+BASEMODEL - llama, GPT
+RAG
+Use context
+vectors
+llama
+GPT
+7 billion parameters
+latency vs accuracy
+LLM vs SLM

@@ -47,6 +47,11 @@ print(obj.sub())    #Need not pass anything, because class's default args are al
 print(obj.mul())
 
 print('******Diamond Inheritance**********')
+"""
+    A
+B      C    
+    D
+"""
 class A:
     def f2(self):
         print("I am function 2 of class A")

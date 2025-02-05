@@ -1,2 +1,3 @@
 https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/
 https://docs.python-guide.org/writing/style/#idioms
+https://docs.python.org/3/faq/design.html#why-can-t-lambda-expressions-contain-statements
