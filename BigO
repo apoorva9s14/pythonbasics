@@ -1,0 +1,19 @@
+# Time Space Cmplexity
+# When you insert an item to the container, all the items in the container gets shifted. Same is for delete
+# Hence the time comp for such operation where the existing elements get shifted is O(n)
+# When yo traverse through the whole container, bigO is O(n)
+
+#For dict - if you have to search for an item, bigO is O(1), but list search bigO is O(n)
+#Because of the hash tables for dict.
+#????Worstcase is O(N) for the case - item in dict????
+# ????get has O(1) in has O(n)????
+
+#tuples perform in almost exactly the same way as lists, 
+#but they do use less memory by removing the ability to modify them after creation (immutable).
+
+# Usage of timeit
+# timeit(
+...     "fn_name(arguments_name)",
+...     setup="from __main__ import fn_name; arguments_name = arguments_value",
+...     number=10000)
+
