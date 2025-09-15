@@ -1,3 +1,8 @@
 https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/
 https://docs.python-guide.org/writing/style/#idioms
 https://docs.python.org/3/faq/design.html#why-can-t-lambda-expressions-contain-statements
+https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/practice-problems/algorithm/vowel-game-f1a1047c/submissions/
+https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt
+https://realpython.com/python-heapq-module/
+https://www.geeksforgeeks.org/math-in-competitive-programming/?ref=rp
+python official tutorial"
